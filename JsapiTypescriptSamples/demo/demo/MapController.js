@@ -1,4 +1,4 @@
-/// <reference path="../../esri.d.ts"/>
+/// <reference path="../../lib/esri.d.ts"/>
 define(["require", "exports", "esri/map", "./Point", "esri/config"], function(require, exports, Map, Point, esriConfig) {
     
 

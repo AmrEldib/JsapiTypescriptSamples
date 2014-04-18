@@ -17,9 +17,14 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="demo\demo.html" />
+    <Content Include="demo\index.html" />
     <Content Include="index.html" />
+    <Content Include="mapconfig_smoothpan\index.html" />
+    <Content Include="map_simple\index.html" />
     <Content Include="web.config" />
+    <Content Include="widget_basemap\index.html" />
+    <Content Include="widget_home\index.html" />
+    <Content Include="widget_toggle\index.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="web.Debug.config">
@@ -33,7 +38,27 @@
     <TypeScriptCompile Include="demo\demo\main.ts" />
     <TypeScriptCompile Include="demo\demo\MapController.ts" />
     <TypeScriptCompile Include="demo\demo\Point.ts" />
-    <TypeScriptCompile Include="esri.d.ts" />
+    <TypeScriptCompile Include="lib\dijit.d.ts" />
+    <TypeScriptCompile Include="lib\dijit.form.button.d.ts" />
+    <TypeScriptCompile Include="lib\dijit.form.d.ts" />
+    <TypeScriptCompile Include="lib\dijit.form.select.d.ts" />
+    <TypeScriptCompile Include="lib\dijit.form.textbox.d.ts" />
+    <TypeScriptCompile Include="lib\dijit.menu.d.ts" />
+    <TypeScriptCompile Include="lib\dojo.d.ts" />
+    <TypeScriptCompile Include="lib\dojo.data.d.ts" />
+    <TypeScriptCompile Include="lib\dojo.store.d.ts" />
+    <TypeScriptCompile Include="lib\dojo.types.d.ts" />
+    <TypeScriptCompile Include="lib\esri.d.ts" />
+    <TypeScriptCompile Include="mapconfig_smoothpan\smoothPan\main.ts" />
+    <TypeScriptCompile Include="map_simple\simpleMap\main.ts" />
+    <TypeScriptCompile Include="widget_basemap\basemapGallery\main.ts" />
+    <TypeScriptCompile Include="widget_basemap\basemapGallery\BasemapGalleryController.ts" />
+    <TypeScriptCompile Include="widget_home\homeButton\main.ts" />
+    <TypeScriptCompile Include="widget_toggle\basemapToggle\BasemapToggleController.ts" />
+    <TypeScriptCompile Include="widget_toggle\basemapToggle\main.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="widget_legend\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
