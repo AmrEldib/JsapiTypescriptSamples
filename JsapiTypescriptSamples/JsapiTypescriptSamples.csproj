@@ -24,6 +24,7 @@
     <Content Include="web.config" />
     <Content Include="widget_basemap\index.html" />
     <Content Include="widget_home\index.html" />
+    <Content Include="widget_legend\index.html" />
     <Content Include="widget_toggle\index.html" />
   </ItemGroup>
   <ItemGroup>
@@ -54,12 +55,12 @@
     <TypeScriptCompile Include="widget_basemap\basemapGallery\main.ts" />
     <TypeScriptCompile Include="widget_basemap\basemapGallery\BasemapGalleryController.ts" />
     <TypeScriptCompile Include="widget_home\homeButton\main.ts" />
+    <TypeScriptCompile Include="widget_legend\legendWidget\LegendController.ts" />
+    <TypeScriptCompile Include="widget_legend\legendWidget\main.ts" />
     <TypeScriptCompile Include="widget_toggle\basemapToggle\BasemapToggleController.ts" />
     <TypeScriptCompile Include="widget_toggle\basemapToggle\main.ts" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="widget_legend\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

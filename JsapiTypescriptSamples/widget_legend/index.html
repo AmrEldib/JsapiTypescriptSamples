@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--The viewport meta tag is used to improve the presentation and behavior of the samples
+      on iOS devices-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>Map with legend</title>
+
+    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/dojo/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">
+
+    <style>
+        html, body {
+            height: 97%;
+            width: 98%;
+            margin: 1%;
+        }
+
+        #rightPane {
+            width: 20%;
+        }
+
+        #legendPane {
+            border: solid #97DCF2 1px;
+        }
+    </style>
+
+    <script src="http://js.arcgis.com/3.9/"></script>
+    <script>
+        require({
+            packages: [{
+                name: "LegendWidget",
+                location: location.pathname.replace(/\/[^/]+$/, "") + "/legendWidget"
+            }]
+        }, ["LegendWidget", "dijit/layout/BorderContainer", "dijit/layout/ContentPane",
+      "dijit/layout/AccordionContainer", "dojo/domReady!"],
+            function (LegendWidget) {
+                console.log("demo started");
+            });
+    </script>
+</head>
+
+<body class="claro">
+    <!--[if IE 7]>
+    <style>
+      html, body {
+            margin: 0;
+        }
+        </style>
+        <![endif]-->
+    <div id="content"
+         data-dojo-type="dijit/layout/BorderContainer"
+         data-dojo-props="design:'headline', gutters:true"
+         style="width: 100%; height: 100%; margin: 0;">
+
+        <div id="rightPane"
+             data-dojo-type="dijit/layout/ContentPane"
+             data-dojo-props="region:'right'">
+
+            <div data-dojo-type="dijit/layout/AccordionContainer">
+                <div data-dojo-type="dijit/layout/ContentPane" id="legendPane"
+                     data-dojo-props="title:'Legend', selected:true">
+                    <div id="legendDiv"></div>
+                </div>
+                <div data-dojo-type="dijit/layout/ContentPane"
+                     data-dojo-props="title:'Pane 2'">
+                    This pane could contain tools or additional content
+                </div>
+            </div>
+        </div>
+        <div id="mapDiv"
+             data-dojo-type="dijit/layout/ContentPane"
+             data-dojo-props="region:'center'"
+             style="overflow:hidden;">
+        </div>
+    </div>
+</body>
+
+</html>
