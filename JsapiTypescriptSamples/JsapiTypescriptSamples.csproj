@@ -20,6 +20,7 @@
     <Content Include="css\docs.min.css" />
     <Content Include="demo\index.html" />
     <Content Include="index.html" />
+    <Content Include="lib\docs.min.js" />
     <Content Include="mapconfig_smoothpan\index.html" />
     <Content Include="map_simple\index.html" />
     <Content Include="web.config" />
