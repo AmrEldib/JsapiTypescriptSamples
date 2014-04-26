@@ -21,8 +21,11 @@
     <Content Include="demo\index.html" />
     <Content Include="index.html" />
     <Content Include="lib\docs.min.js" />
+    <Content Include="lib\jquery.fastLiveFilter.js" />
+    <Content Include="lib\mustache.js" />
     <Content Include="mapconfig_smoothpan\index.html" />
     <Content Include="map_simple\index.html" />
+    <Content Include="navTemplate.html" />
     <Content Include="web.config" />
     <Content Include="widget_basemap\index.html" />
     <Content Include="widget_home\index.html" />
@@ -33,7 +36,8 @@
     <Content Include="widget_toggle\index.html" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="lib\jquery.quickfilter-0.0.1.js" />
+    <Content Include="samplesTemplate.html" />
+    <Content Include="samples.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -72,7 +76,9 @@
     <TypeScriptCompile Include="widget_toggle\basemapToggle\BasemapToggleController.ts" />
     <TypeScriptCompile Include="widget_toggle\basemapToggle\main.ts" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="System.Web" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

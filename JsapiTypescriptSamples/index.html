@@ -27,410 +27,87 @@
             }
     </style>
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script type="text/javascript" src="lib/jquery.quickfilter-0.0.1.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('.samplesList').quickFilter({ caseSensitive: false });
-            $('.value').click(function () { $('.samplesList').trigger('filter', $(this).val()); });
-            $('.clear').click(function () { $('.samplesList').trigger('clear'); });
-        });
-    </script>
-    <script type="text/javascript">
-        $(window).scroll(function () {
-            if ($(document).scrollTop() > 50) {
-                $('#banner').addClass('shrink');
-            } else {
-                $('#banner').removeClass('shrink');
-            }
-        });
-    </script>
+    <script src="lib/mustache.js"></script>
+    <script src="lib/jquery.fastLiveFilter.js"></script>
+
 </head>
 
-<body data-spy="scroll" data-target="#navContainer">
+<body data-spy="scroll" data-target="#navBar">
     <div id="banner" class="bs-docs-header">
         <div class="container">
             <h1>TypeScript Samples for ArcGIS API for JavaScript</h1>
         </div>
-
     </div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <form role="form">
                     <div class="form-group">
-                        <input class="form-control" placeholder="Filter" type="text" rel="filter" />
+                        <input id="txtFilter" class="form-control" placeholder="Filter" type="text" />
                     </div>
                 </form>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-9">
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_analytics" class="page-header">Analytics</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_directions" class="page-header">Directions and Routing</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_dynamiclayers" class="page-header">Dynamic Layers</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_editing" class="page-header">Editing</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_geocoding" class="page-header">Geocoding</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_graphics" class="page-header">Graphics</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_html5" class="page-header">HTML5</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_imagelayer" class="page-header">Images Layer</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_map" class="page-header">Map</h1></li>
-                    <li>
-                        <h4><a href="widget_basemap/index.html">Basemap Gallery</a></h4>
-
-                        <p>Use the BasemapGallery widget to select a map's basemap. This widget presents a gallery of base maps that can be user-defined or generated by a query from ArcGIS.com.</p>
-
-                        <p>You can add additional basemaps to the gallery, however all basemaps added to the BasemapGallery must be in the same projection. If you are displaying basemaps from ArcGIS.com by setting <code>showArcGISBasemaps = true</code> then the additional basemaps must be in the Web Mercator projection.</p>
-
-                    </li>
-
-                    <li>
-                        <h4><a href="widget_toggle/index.html">Basemap Toggle</a></h4>
-                        <p>Toggle between basemaps using the BasemapToggle widget. When creating the widget define a basemap that users will be able to switch to from the current basemap. Note: At version 3.7 the widget does not work with maps created from web maps using createMap.</p>
-                    </li>
-                    <li>
-                        <h4><a href="map_simple/index.html">Create a Map</a></h4>
-                        <p>
-                            This sample demonstrates how to create a full-page mapping application. This example creates a new map, centered on the city of San Francisco, and adds one of the pre-defined basemaps to the map.
-                            The basemap option allows you to specify one of the following default basemaps for your application: <code>streets | satellite | hybrid | topo | gray | oceans | national-geographic | osm.</code>
-                        </p>
-                    </li>
-                    <li>
-                        <h4><a href="mapconfig_smoothpan/index.html">Customize navigation animation</a></h4>
-                        <p>
-                            This sample shows how you can customize the animation behavior of the map when a user clicks the pan buttons. The panDuration and panRate are Dojo animation properties that determine the <a href="http://api.dojotoolkit.org/jsdoc/dojo/HEAD/dojo._Animation.duration">duration</a> of the animation and the
-                            <a href="http://api.dojotoolkit.org/jsdoc/dojo/HEAD/dojo._Animation.rate">rate</a> of frame refresh, respectively. these properties are both measured in milliseconds and default to 250 for the pan duration and 25 for the pan rate.<br />
-                            you can adjust the properties in this sample to get the best look for your data and application. for example, if your map takes a long time to load, you might increase the pan duration so that the user will spend less time looking at an empty screen while waiting for the panned map to load. conversely, if your map loads quickly, you might decrease the duration to give the map a faster feel.
-                        </p>
-                    </li>
-                    <li>
-                        <h4><a href="widget_home/index.html">Home Button</a></h4>
-                        <p>Quickly return to the map's default start extent using the HomeButton widget. When the widget is created the developer specifies an extent that will be used as the 'home extent'. As users pan and zoom around the map they can click the home button to return to the specified start extent. </p>
-                    </li>
-                    <li>
-                        <h4><a href="widget_legend/index.html">Legend</a></h4>
-                        <p>
-                            Use the Legend widget to build a legend that displays some or all of the layers in the map. To create a new legend widget specify the map and the HTML element where the legend will display. Optionally you can provide a list of layers to display in the legend. If no layers are specified all the layers will display in the legend.<br />
-                            You can also set the <code>respectCurrentMapScale</code> parameter to true if you want the legend to only display layers that are visible in the current map scale.
-                        </p>
-                    </li>
-                    <li>
-                        <h4><a href="widget_locate/index.html">Locate Button</a></h4>
-                        <p>
-                            Find and zoom to the users current location using the LocateButton widget. This widget uses the geolocation api to find the users current location. Once the location is found the map zooms to that location. The widget provides options that allow the developer to define the following:
-                            <ul>
-                                <li>HTML5 Geolocation Position options for finding a location such as maximumAge and timeout.</li>
-                                <li>The ability to define a custom symbol that will be used to highlight the users current location on the map.</li>
-                                <li>The scale to zoom to when a location has been found</li>
-                                <li>And more...</li>
-                            </ul>
-                        </p>
-                    </li>
-                    <li>
-                        <h4><a href="widget_overviewmap/index.html">Overview Map</a></h4>
-                        <p>Use the OverviewMap widget to display a small map in the upper right corner of the main map.</p>
-                    </li>
-                    <li>
-                        <h4><a href="widget_scalebar/index.html">Scalebar</a></h4>
-                        <p>This sample shows how to add a scalebar to a map. The scalebar can be added to the map or in a user-specified location. The code below shows the default scalebar which displays in the bottom-left corner of the map.You can modify the location of the scalebar by setting the attachTo option to one of the following values <code>top-right, bottom-right, top-center, bottom-center, bottom-left, top-left</code>.</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_agol" class="page-header">Maps from ArcGIS.com</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_mobile" class="page-header">Mobile</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_popups" class="page-header">Popups and Info Windows</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_portal" class="page-header">Portal</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_printing" class="page-header">Printing</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_query" class="page-header">Query and Select</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_renderers" class="page-header">Renderers</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_secure" class="page-header">Secured Resources</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_tiledlayers" class="page-header">Tiled Layers</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_time" class="page-header">Time</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-                <ul class="samplesList list-unstyled">
-                    <li><h1 id="section_vector" class="page-header">Vector Feature Layers</h1></li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                    <li>
-                        <h4>Title</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                    </li>
-                </ul>
-
-            </div>
+            <div id="samplesContainer" class="col-md-9"></div>
 
             <div class="col-md-3">
-                <div id="navContainer" class="navbar bs-docs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="50">
-                    <ul class="nav bs-docs-sidenav">
-
-                        <li class="active">
-                            <a href="#section_analytics">Analytics</a>
-                        </li>
-                        <li>
-                            <a href="#section_directions">Directions and Routing</a>
-                        </li>
-                        <li>
-                            <a href="#section_dynamiclayers">Dynamic Layers</a>
-                        </li>
-                        <li>
-                            <a href="#section_editing">Editing</a>
-                        </li>
-                        <li>
-                            <a href="#section_geocoding">Geocoding</a>
-                        </li>
-                        <li>
-                            <a href="#section_graphics">Graphics</a>
-                        </li>
-                        <li>
-                            <a href="#section_html5">HTML5</a>
-                        </li>
-                        <li>
-                            <a href="#section_imagelayer">Images Layer</a>
-                        </li>
-                        <li>
-                            <a href="#section_map">Map</a>
-                        </li>
-                        <li>
-                            <a href="#section_agol">Maps from ArcGIS.com</a>
-                        </li>
-                        <li>
-                            <a href="#section_mobile">Mobile</a>
-                        </li>
-                        <li>
-                            <a href="#section_popups">Popups and Info Windows</a>
-                        </li>
-                        <li>
-                            <a href="#section_portal">Portal</a>
-                        </li>
-                        <li>
-                            <a href="#section_printing">Printing</a>
-                        </li>
-                        <li>
-                            <a href="#section_query">Query and Select</a>
-                        </li>
-                        <li>
-                            <a href="#section_renderers">Renderers</a>
-                        </li>
-                        <li>
-                            <a href="#section_secure">Secure Resources</a>
-                        </li>
-                        <li>
-                            <a href="#section_tiledlayers">Tiled Layers</a>
-                        </li>
-                        <li>
-                            <a href="#section_time">Time</a>
-                        </li>
-                        <li>
-                            <a href="#section_vector">Vector Feature Layers</a>
-                        </li>
-                    </ul>
+                <div id="navBar" class="navbar bs-docs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="50">
+                    <ul id="navContainer" class="nav bs-docs-sidenav"></ul>
                 </div>
             </div>
         </div>
     </div>
-</body>
 
+    <script type="text/javascript">
+
+        try {
+            $.get('samples.json', function (samplesDataString) {
+                var sampleData = JSON.parse(samplesDataString);
+                //console.log(sampleData);
+                $.get('samplesTemplate.html', function (samplesTemplate) {
+                    //console.log(samplesTemplate);
+                    var samplesHtml = Mustache.render(samplesTemplate, sampleData);
+                    //console.log(samplesHtml);
+                    $('#samplesContainer').html(samplesHtml);
+
+                    $(function () {
+                        $('#txtFilter').fastLiveFilter('.samplesList', {
+                            timeout: 200,
+                            callback: function (total) {
+                                console.log("Found: " + total);
+                            }
+                        });
+                    });
+                });
+                $.get('navTemplate.html', function (navTemplate) {
+                    var navHtml = Mustache.render(navTemplate, sampleData);
+                    $('#navContainer').html(navHtml);
+
+                    $(window).scroll(function () {
+                        if ($(document).scrollTop() > 50) {
+                            $('#banner').addClass('shrink');
+                        } else {
+                            $('#banner').removeClass('shrink');
+                        }
+                    });
+                });
+
+            });
+        } catch (e) {
+            console.log(e);
+        }
+    </script>
+
+
+
+    <script type="text/javascript">
+
+    </script>
+
+</body>
 </html>

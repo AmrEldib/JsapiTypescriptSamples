@@ -1,0 +1,13 @@
+﻿{{#categories}}
+	<ul class='samplesList list-unstyled'>
+		<li>
+			<h1 id='{{id}}' class='page-header'>{{category}}</h1>
+		</li>
+		{{#samples}}
+			<li>
+				<h4><a href="{{url}}">{{title}}</a></h4>
+				<p>{{&description}}</p>
+			</li>
+		{{/samples}}
+	</ul>
+{{/categories}}

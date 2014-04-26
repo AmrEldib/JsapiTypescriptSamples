@@ -1,0 +1,729 @@
+﻿{
+  "categories": [
+    {
+      "category": "Analytics",
+      "id": "section_analytics",
+      "samples": [
+        {
+          "title": "Buffer any shape",
+          "description": "Use an ArcGIS Server geometry service to buffer graphics that you draw on the map. The geometry service can perform buffering, project features and calculate measurements in browser-based applications.",
+          "url": "#"
+        },
+        {
+          "title": "Calculate feature length or area",
+          "description": "This example shows how you can use an ArcGIS Server geometry service to measure polygon areas and perimeter lengths in your Web application. When you draw a polygon with the mouse, the Draw toolbar captures the polygon's geometry. This sample passes the geometry to the GeometryService.areasAndLengths() method.\n\nBecause this map uses a projected coordinate system that is appropriate for calculating lengths and areas, no projection of the polygon is necessary. If your map is in a geographic coordinate system and you need to project the polygon before measuring, see the sample Measure distances to learn how to perform the projection with the geometry service.",
+          "url": "#"
+        },
+        {
+          "title": "Geoenrichment - Infographic",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Geoenrichment - InfographicsCarousel",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Geoprocessing with result map service",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Hotspot Analysis",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "LayerSwipe widget",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Measurement",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Point in polygon search",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Points for labeling",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Population zonal statistics",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Service area task",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Summarize Nearby Analysis",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Viewshed",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Directions and Routing",
+      "id": "section_directions",
+      "samples": [
+        {
+          "title": "Basic service area",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Directions",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Find closest facilities",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "World traffic",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Dynamic Layers",
+      "id": "section_dynamiclayers",
+      "samples": [
+        {
+          "title": "Change attribute used for a renderer",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Class breaks renderer with dynamic layer",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Dynamic map service",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Layer definitions on a dynamic map service",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Reorder layers in map service",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "WMS - resource info",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Editing",
+      "id": "section_editing",
+      "samples": [
+        {
+          "title": "Attachment editor",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Drawing tools",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Edit without editor widget",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Editing tools",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Editor widget with simple toolbar",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Move and edit vertices",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Query and edit related records",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Template picker widget",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Using the attribute inspector",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Geocoding",
+      "id": "section_geocoding",
+      "samples": [
+        {
+          "title": "Geocode an address",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Geocode details",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Geocoder",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Geocoder with custom service",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Reverse geocode",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Graphics",
+      "id": "section_graphics",
+      "samples": [
+        {
+          "title": "Add graphics to a map",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Create circles",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Display context menu",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Graphics with undo redo",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Point clustering",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "SVG and CSS to style polygons",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "SVG and CSS using D3",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "SVG path to create a SimpleMarkerSymbol",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "HTML5",
+      "id": "section_html5",
+      "samples": [
+        {
+          "title": "Canvas with raster layer",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Cross Origin Resource Sharing(CORS) - buffer",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Drag and drop to display data",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "History API to track selected feature",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Images Layer",
+      "id": "section_imageslayer",
+      "samples": [
+        {
+          "title": "Image service",
+          "description": "<p>This sample shows how to add an ArcGISImageServiceLayer to the map. An ImageServiceParameters object is created and the default format and noData options are specified. View the <a href='https://developers.arcgis.com/javascript/jsapi/imageserviceparameters-amd.html' target='_blank'>ImageServiceParameters</a> help topic for details on additional options.</p><p>Note that the noDate option is set to 0, setting this allows the underlying basemap to show through in areas where the image service contains no data.</p>",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Map",
+      "id": "section_map",
+      "samples": [
+        {
+          "title": "Basemap gallery",
+          "description": "<p>Use the BasemapGallery widget to select a map's basemap. This widget presents a gallery of base maps that can be user-defined or generated by a query from ArcGIS.com.</p><p>You can add additional basemaps to the gallery, however all basemaps added to the BasemapGallery must be in the same projection. If you are displaying basemaps from ArcGIS.com by setting <code>showArcGISBasemaps = true</code> then the additional basemaps must be in the Web Mercator projection.</p>",
+          "url": "widget_basemap/index.html"
+        },
+        {
+          "title": "Basemap Toggle",
+          "description": "<p>Toggle between basemaps using the BasemapToggle widget. When creating the widget define a basemap that users will be able to switch to from the current basemap. Note: At version 3.7 the widget does not work with maps created from web maps using createMap.</p>",
+          "url": "widget_toggle/index.html"
+        },
+        {
+          "title": "Create a map",
+          "description": "This sample demonstrates how to create a full-page mapping application. This example creates a new map, centered on the city of San Francisco, and adds one of the pre-defined basemaps to the map.<br/>The basemap option allows you to specify one of the following default basemaps for your application: <code>streets | satellite | hybrid | topo | gray | oceans | national-geographic | osm.</code>",
+          "url": "map_simple/index.html"
+        },
+        {
+          "title": "Customize navigation animation",
+          "description": "This sample shows how you can customize the animation behavior of the map when a user clicks the pan buttons. The panDuration and panRate are Dojo animation properties that determine the <a href='http://api.dojotoolkit.org/jsdoc/dojo/HEAD/dojo._Animation.duration'>duration</a> of the animation and the <a href='http://api.dojotoolkit.org/jsdoc/dojo/HEAD/dojo._Animation.rate'>rate</a> of frame refresh, respectively. these properties are both measured in milliseconds and default to 250 for the pan duration and 25 for the pan rate.<br /> you can adjust the properties in this sample to get the best look for your data and application. for example, if your map takes a long time to load, you might increase the pan duration so that the user will spend less time looking at an empty screen while waiting for the panned map to load. conversely, if your map loads quickly, you might decrease the duration to give the map a faster feel.",
+          "url": "mapconfig_smoothpan/index.html"
+        },
+        {
+          "title": "Home Button",
+          "description": "Quickly return to the map's default start extent using the HomeButton widget. When the widget is created the developer specifies an extent that will be used as the 'home extent'. As users pan and zoom around the map they can click the home button to return to the specified start extent.",
+          "url": "widget_home/index.html"
+        },
+        {
+          "title": "Legend",
+          "description": "Use the Legend widget to build a legend that displays some or all of the layers in the map. To create a new legend widget specify the map and the HTML element where the legend will display. Optionally you can provide a list of layers to display in the legend. If no layers are specified all the layers will display in the legend.<br />You can also set the <code>respectCurrentMapScale</code> parameter to true if you want the legend to only display layers that are visible in the current map scale.",
+          "url": "widget_legend/index.html"
+        },
+        {
+          "title": "Locate Button",
+          "description": "Find and zoom to the users current location using the LocateButton widget. This widget uses the geolocation api to find the users current location. Once the location is found the map zooms to that location. The widget provides options that allow the developer to define the following:                            <ul><li>HTML5 Geolocation Position options for finding a location such as maximumAge and timeout.</li><li>The ability to define a custom symbol that will be used to highlight the users current location on the map.</li><li>The scale to zoom to when a location has been found</li><li>And more...</li></ul>",
+          "url": "widget_locate/index.html"
+        },
+        {
+          "title": "Overview map",
+          "description": "Use the OverviewMap widget to display a small map in the upper right corner of the main map.",
+          "url": "widget_overviewmap/index.html"
+        },
+        {
+          "title": "Scalebar",
+          "description": "This sample shows how to add a scalebar to a map. The scalebar can be added to the map or in a user-specified location. The code below shows the default scalebar which displays in the bottom-left corner of the map.You can modify the location of the scalebar by setting the attachTo option to one of the following values <code>top-right, bottom-right, top-center, bottom-center, bottom-left, top-left</code>.",
+          "url": "widget_scalebar/index.html"
+        }
+      ]
+    },
+    {
+      "category": "Maps from ArcGIS.com",
+      "id": "section_agol",
+      "samples": [
+        {
+          "title": "Editing layout using map data from ArcGIS.com",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Fade effect using ArcGIS.com web maps",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Gauges with ArcGIS.com webmap",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Geodesic buffers with ArcGIS.com webmap",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Web map by ID",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Web map using JSON",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Mobile",
+      "id": "section_mobile",
+      "samples": [
+        {
+          "title": "Attribute editing - mobile",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Compass",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Mobile ArcGIS.com",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Shake gesture recognition",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Soil details - mobile",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Tilt gesture",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Popups and Info Windows",
+      "id": "section_popups",
+      "samples": [
+        {
+          "title": "Custom info window",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Format info window content",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Geoprocessing tool link in popup",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Info Window Lite",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Mobile popup",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Popup",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Popup content in side panel",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Portal",
+      "id": "section_portal",
+      "samples": [
+        {
+          "title": "Add shapefile",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Find group ID",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Printing",
+      "id": "section_dynamiclayers",
+      "samples": [
+        {
+          "title": "Print webmap",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Query and Select",
+      "id": "section_query",
+      "samples": [
+        {
+          "title": "Feature layer hover",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Manage results from multiple queries",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Query data without a map",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Query with Feature Layer",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Select with Feature Layer",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Renderers",
+      "id": "section_renderers",
+      "samples": [
+        {
+          "title": "Class breaks renderer",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Color ramp symbols",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Color ramp with rotation and proportional symbols",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Dot density renderer",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Generate renderer",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Proportional symbols for lines",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Proportional symbols for points",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Renderer using a function",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Scale dependent renderer",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Temporal renderer",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Unique value renderer",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Secured Resources",
+      "id": "section_secured",
+      "samples": [
+        {
+          "title": "Identity Manager with info persisted client side",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "OAuth Basic",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "OAuth Popup",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Tiled Layers",
+      "id": "section_tiledlayers",
+      "samples": [
+        {
+          "title": "Tiled map service",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Web tiled",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "WMTS - resource info",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Time",
+      "id": "section_time",
+      "samples": [
+        {
+          "title": "Histogram Time Slider",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Time slider with dynamic map service layer",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "category": "Vector Feature Layers",
+      "id": "section_vector",
+      "samples": [
+        {
+          "title": "Any projection",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "CSV",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "dgrid",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Feature collection",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Gas price data by state mashup",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "GeoRSS",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "KML",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "KML with buffer",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Label Layer",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "No basemap",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "On demand mode",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Request layer info",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Select features within a two minute drive time",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Stream Layer",
+          "description": "Description",
+          "url": "#"
+        },
+        {
+          "title": "Table source from ArcGIS Server",
+          "description": "Description",
+          "url": "#"
+        }
+      ]
+    }
+  ]
+}
