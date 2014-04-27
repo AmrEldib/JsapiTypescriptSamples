@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>JSAPI's TypeScript Samples</title>
+    <title>TypeScript Samples for ArcGIS API for JavaScript</title>
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
@@ -29,9 +29,9 @@
         .sampleLinks {
             display: inline;
             opacity: 0;
-           transition: opacity .25s ease-in-out;
-           -moz-transition: opacity .25s ease-in-out;
-           -webkit-transition: opacity .25s ease-in-out;
+            transition: opacity .25s ease-in-out;
+            -moz-transition: opacity .25s ease-in-out;
+            -webkit-transition: opacity .25s ease-in-out;
         }
 
         .sampleSection:hover .sampleLinks {
@@ -44,7 +44,6 @@
     <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="lib/mustache.js"></script>
     <script src="lib/jquery.fastLiveFilter.js"></script>
-
 </head>
 
 <body data-spy="scroll" data-target="#navBar">
@@ -77,7 +76,6 @@
     </div>
 
     <script type="text/javascript">
-
         try {
             $.get('samples.json', function (samplesDataString) {
                 var sampleData = JSON.parse(samplesDataString);
@@ -115,12 +113,5 @@
             console.log(e);
         }
     </script>
-
-
-
-    <script type="text/javascript">
-
-    </script>
-
 </body>
 </html>
