@@ -25,6 +25,19 @@
                 padding: 4px 5px;
                 margin: 8px 15px 8px 0;
             }
+
+        .sampleLinks {
+            display: inline;
+            opacity: 0;
+           transition: opacity .25s ease-in-out;
+           -moz-transition: opacity .25s ease-in-out;
+           -webkit-transition: opacity .25s ease-in-out;
+        }
+
+        .sampleSection:hover .sampleLinks {
+            display: inline;
+            opacity: 1;
+        }
     </style>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

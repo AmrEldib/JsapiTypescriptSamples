@@ -4,10 +4,18 @@
 			<h1 id='{{id}}' class='page-header'>{{category}}</h1>
 		</li>
 		{{#samples}}
-			<li>
-				<h4><a href="{{url}}">{{title}}</a></h4>
-				<p>{{&description}}</p>
-			</li>
+        <li class="sampleSection">
+            <h4 style="display:inline;">
+                <a href="{{sampleId}}/index.html">{{title}}</a>
+            </h4>
+            <div class="sampleLinks">
+                <a href="https://developers.arcgis.com/javascript/jssamples/{{sampleId}}.html" target="_blank" title="View JSAPI Sample">
+                    <img src="img/EsriGlobe.ico" />
+                </a>
+            </div>
+            <p>{{&description}}</p>
+            <hr style="clear:both;" />
+        </li>
 		{{/samples}}
 	</ul>
 {{/categories}}
