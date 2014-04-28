@@ -78,6 +78,7 @@
     <script type="text/javascript">
         try {
             $.get('samples.json', function (samplesDataString) {
+                console.log(samplesDataString);
                 var sampleData = JSON.parse(samplesDataString);
                 //console.log(sampleData);
                 $.get('samplesTemplate.html', function (samplesTemplate) {
