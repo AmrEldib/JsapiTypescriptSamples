@@ -264,7 +264,7 @@
 			"categoryId" : "section_html5",
 			"samples" : [{
 					"title" : "Canvas with raster layer",
-					"description" : "Description",
+					"description" : "This sample shows how to use a canvas element to draw a raster image. When the application loads, a new layer class, RasterLayer, is created and added to the map.The newly added raster layer is populated with elevation data from using the<a href='http://sampleserver4.arcgisonline.com/ArcGIS/rest/services/Elevation/ESRI_Elevation_World/MapServer/exts/ElevationsSOE/ElevationLayers/1/GetElevationData' target='_blank'>Elevation Server Object Extension</a>from one of Esri's sample servers. Canvas is supported on all major browsers except older versions of Internet Explorer sorendering raster images using the Canvas element could provide a way to display client-side heat maps. Refer to<span style='line-height: 1.3846153846153846;'><a href='http://caniuse.com/#search=canvas' target='_blank'>caniuse.com</a>for additional info on browser support for canvas.</span>",
 					"url" : "#",
 					"sampleId" : "exp_rasterlayer"
 				}, {

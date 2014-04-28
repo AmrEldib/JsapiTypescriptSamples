@@ -19,6 +19,7 @@
   <ItemGroup>
     <Content Include="css\docs.min.css" />
     <Content Include="demo\index.html" />
+    <Content Include="exp_rasterlayer\index.html" />
     <Content Include="img\EsriGlobe.ico" />
     <Content Include="index.html" />
     <Content Include="lib\docs.min.js" />
@@ -51,6 +52,8 @@
     <TypeScriptCompile Include="demo\demo\main.ts" />
     <TypeScriptCompile Include="demo\demo\MapController.ts" />
     <TypeScriptCompile Include="demo\demo\Point.ts" />
+    <TypeScriptCompile Include="exp_rasterlayer\canvasRasterLayer\main.ts" />
+    <TypeScriptCompile Include="exp_rasterlayer\canvasRasterLayer\CanvasRasterLayerController.ts" />
     <TypeScriptCompile Include="lib\dijit.d.ts" />
     <TypeScriptCompile Include="lib\dijit.form.button.d.ts" />
     <TypeScriptCompile Include="lib\dijit.form.d.ts" />
@@ -73,8 +76,8 @@
     <TypeScriptCompile Include="widget_overviewmap\overviewMapWidget\main.ts" />
     <TypeScriptCompile Include="widget_locate\locateWidget\LocateController.ts" />
     <TypeScriptCompile Include="widget_locate\locateWidget\main.ts" />
-    <TypeScriptCompile Include="image_simpleimageservice\scalebarWidget\main.ts" />
-    <TypeScriptCompile Include="image_simpleimageservice\scalebarWidget\ScalebarController.ts" />
+    <TypeScriptCompile Include="image_simpleimageservice\simpleImageService\main.ts" />
+    <TypeScriptCompile Include="image_simpleimageservice\simpleImageService\SimpleImageServiceController.ts" />
     <TypeScriptCompile Include="widget_scalebar\scalebarWidget\main.ts" />
     <TypeScriptCompile Include="widget_scalebar\scalebarWidget\ScalebarController.ts" />
     <TypeScriptCompile Include="widget_toggle\basemapToggle\BasemapToggleController.ts" />

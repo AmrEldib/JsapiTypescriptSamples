@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>Raster Layer</title>
+
+    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/dojo/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">
+    <style>
+      html,body {
+        width:98%;
+        height:98%;
+        margin: 0 1%;
+        padding: 10px 0 0 0;
+      }
+
+      #mapCanvas {
+        border:solid 1px #888;
+        padding:0;
+      }
+
+      #status {
+          background-color:#000;
+          color:#FFF;
+          border:solid 1px #FFF;
+          -moz-border-radius:5px;
+          -webkit-border-radius:5px;
+          border-radius:5px;
+          padding:3px;
+      }
+
+    .shadow {
+        -moz-border-radius:6px;
+        -webkit-border-radius:6px;
+        border-radius:6px;
+        -moz-box-shadow:0 6px 3px -3px #bdbdbd;
+        -webkit-box-shadow:0 6px 3px -3px #bdbdbd;
+        box-shadow:0 6px 3px -3px #bdbdbd;
+        background-color:#FFF;
+        padding:8px;
+    }
+      #footer{
+        height:80px;
+        padding:10px;
+      }
+    </style>
+
+    <script>
+      var dojoConfig = { 
+          paths: {
+              modules: location.pathname.replace(/\/[^/]+$/, "") + "/javascript"
+          }
+      };
+    </script>
+    <script src="http://js.arcgis.com/3.9compact/"></script>
+    <script>
+        require({
+            packages: [{
+                name: "CanvasRasterLayer",
+                location: location.pathname.replace(/\/[^/]+$/, "") + "/canvasRasterLayer"
+            }]
+        }, ["CanvasRasterLayer",
+            "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dijit/form/HorizontalSlider", "dojo/domReady!"
+        ],
+            function (CanvasRasterLayer) {
+                console.log("demo started");
+            });
+        </script>
+      </head>
+  
+      <body class="claro">
+        <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline', gutters:false"
+        style="width: 100%; height: 100%; margin: 0;">
+         <div id="mapCanvas"  class='shadow' data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"
+        style="height:100%;">
+          <div id="status" style="position: absolute; right: 10px; top: 10px; z-index: 99;">
+            Loading...
+          </div>
+      </div>
+      <div  id="footer"  data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom'">
+        <span style='font-weight:600;' id='elevSpan'>Filter by Elevation </span>
+        <div id='elevVal'></div>
+        <div id="elevSlider"  data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="
+        minimum:-100, value:2000, maximum:8000, showButtons:'false',
+        intermediateChanges:'false', slideDuration:'0'">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
