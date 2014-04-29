@@ -77,10 +77,7 @@
 
     <script type="text/javascript">
         try {
-            $.get('samples.json', function (samplesDataString) {
-                console.log(samplesDataString);
-                var sampleData = samplesDataString; //JSON.parse(samplesDataString);
-                //console.log(sampleData);
+            $.get('samples.json', function (samplesData) {
                 $.get('samplesTemplate.html', function (samplesTemplate) {
                     //console.log(samplesTemplate);
                     var samplesHtml = Mustache.render(samplesTemplate, sampleData);
