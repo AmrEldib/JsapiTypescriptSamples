@@ -17,6 +17,8 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="ags_createwebmapid\css\layout.css" />
+    <Content Include="ags_createwebmapid\webmapbyId\index.html" />
     <Content Include="css\docs.min.css" />
     <Content Include="demo\index.html" />
     <Content Include="exp_rasterlayer\index.html" />
@@ -49,6 +51,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="ags_createwebmapid\webmapbyId\main.ts" />
+    <TypeScriptCompile Include="ags_createwebmapid\webmapbyId\WebmapbyIdController.ts" />
     <TypeScriptCompile Include="demo\demo\main.ts" />
     <TypeScriptCompile Include="demo\demo\MapController.ts" />
     <TypeScriptCompile Include="demo\demo\Point.ts" />
@@ -86,6 +90,7 @@
   <ItemGroup>
     <Reference Include="System.Web" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
