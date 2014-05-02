@@ -80,7 +80,7 @@
             $.get('samples.json', function (samplesData) {
                 $.get('samplesTemplate.html', function (samplesTemplate) {
                     //console.log(samplesTemplate);
-                    var samplesHtml = Mustache.render(samplesTemplate, sampleData);
+                    var samplesHtml = Mustache.render(samplesTemplate, samplesData);
                     //console.log(samplesHtml);
                     $('#samplesContainer').html(samplesHtml);
 
@@ -94,7 +94,7 @@
                     });
                 });
                 $.get('navTemplate.html', function (navTemplate) {
-                    var navHtml = Mustache.render(navTemplate, sampleData);
+                    var navHtml = Mustache.render(navTemplate, samplesData);
                     $('#navContainer').html(navHtml);
 
                     $(window).scroll(function () {
