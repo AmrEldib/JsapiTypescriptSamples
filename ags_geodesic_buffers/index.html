@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <title>Geodesic Buffers</title>
+    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/esri/css/esri.css" />
+    <style>
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        h3 {
+            margin: 0 0 5px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        .shadow {
+            -moz-box-shadow: 0 0 5px #888;
+            -webkit-box-shadow: 0 0 5px #888;
+            box-shadow: 0 0 5px #888;
+        }
+
+        #feedback {
+            background: #fff;
+            bottom: 30px;
+            color: #444;
+            position: absolute;
+            font-family: arial;
+            height: 140px;
+            left: 30px;
+            margin: 5px;
+            padding: 10px;
+            width: 300px;
+            z-index: 40;
+        }
+
+        #note {
+            font-size: 80%;
+            font-weight: 700;
+            padding: 0 0 10px 0;
+        }
+    </style>
+
+    <script src="http://js.arcgis.com/3.9/"></script>
+    <script>
+        require({
+            packages: [{
+                name: "GeodesicBuffers",
+                location: location.pathname.replace(/\/[^/]+$/, "") + "/geodesicBuffers"
+            }]
+        }, ["GeodesicBuffers",
+            "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dojo/domReady!"],
+            function (GeodesicBuffers) {
+                console.log("demo started");
+            });
+    </script>
+</head>
+
+<body>
+    <div id="map">
+        <div id="feedback" class="shadow">
+            <h3>Geodesic buffers of data in a webmap from ArcGIS.com</h3>
+            <div id="info">
+                <div id="note">
+                    The areas in gray are 2,000 kilometers from a recent magnitude 5 earthquakes. Geodesic buffers (as opposed
+                    to Euclidean) are used to show a more accurate areas.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

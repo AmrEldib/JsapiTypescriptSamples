@@ -21,6 +21,7 @@
     <Content Include="ags_createwebmapid\index.html" />
     <Content Include="ags_createwebmapitem\css\layout.css" />
     <Content Include="ags_createwebmapitem\index.html" />
+    <Content Include="ags_geodesic_buffers\index.html" />
     <Content Include="css\docs.min.css" />
     <Content Include="demo\index.html" />
     <Content Include="exp_rasterlayer\index.html" />
@@ -57,6 +58,8 @@
     <TypeScriptCompile Include="ags_createwebmapid\webmapbyId\WebmapbyIdController.ts" />
     <TypeScriptCompile Include="ags_createwebmapitem\webmapbyIditem\main.ts" />
     <TypeScriptCompile Include="ags_createwebmapitem\webmapbyIditem\WebmapbyIditemController.ts" />
+    <TypeScriptCompile Include="ags_geodesic_buffers\geodesicBuffers\GeodesicBuffersController.ts" />
+    <TypeScriptCompile Include="ags_geodesic_buffers\geodesicBuffers\main.ts" />
     <TypeScriptCompile Include="demo\demo\main.ts" />
     <TypeScriptCompile Include="demo\demo\MapController.ts" />
     <TypeScriptCompile Include="demo\demo\Point.ts" />
