@@ -18,7 +18,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="ags_createwebmapid\css\layout.css" />
-    <Content Include="ags_createwebmapid\webmapbyId\index.html" />
+    <Content Include="ags_createwebmapid\index.html" />
+    <Content Include="ags_createwebmapitem\css\layout.css" />
+    <Content Include="ags_createwebmapitem\index.html" />
     <Content Include="css\docs.min.css" />
     <Content Include="demo\index.html" />
     <Content Include="exp_rasterlayer\index.html" />
@@ -53,6 +55,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="ags_createwebmapid\webmapbyId\main.ts" />
     <TypeScriptCompile Include="ags_createwebmapid\webmapbyId\WebmapbyIdController.ts" />
+    <TypeScriptCompile Include="ags_createwebmapitem\webmapbyIditem\main.ts" />
+    <TypeScriptCompile Include="ags_createwebmapitem\webmapbyIditem\WebmapbyIditemController.ts" />
     <TypeScriptCompile Include="demo\demo\main.ts" />
     <TypeScriptCompile Include="demo\demo\MapController.ts" />
     <TypeScriptCompile Include="demo\demo\Point.ts" />
