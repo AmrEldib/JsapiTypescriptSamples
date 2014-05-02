@@ -23,7 +23,7 @@ class BasemapGalleryController {
                 center: [-105.255, 40.022],
                 zoom: 13
             });
-
+             
             //add the basemap gallery, in this case we'll display maps from ArcGIS.com including bing maps
             var basemapGallery = new BasemapGallery({
                 showArcGISBasemaps: true,
