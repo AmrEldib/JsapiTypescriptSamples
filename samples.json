@@ -219,7 +219,7 @@
 			"categoryId" : "section_graphics",
 			"samples" : [{
 					"title" : "Add graphics to a map",
-					"description" : "Description",
+					"description" : "<p>You can use a <a href='https://developers.arcgis.com/javascript/jsapi/draw-amd.html' target='_blank'>Draw</a> toolbar to sketch shapes on a map.</p><p>The toolbar is not a user interface component that you automatically see on the page. Instead, it's a helper class that you can use to let people sketch geometries on the map. It saves you the effort of writing the code for sketching each geometry type. You just activate the type of geometry you want people to sketch. In this example, each button activates a different geometry type.</p><p>When a button is clicked, the toolbar activates the corresponding tool. Alternatively you could allow geometry type selection from a dropdown list, a set of radio buttons, or some other control.</p><p>When the toolbar's \"draw-end\" event fires, a function is called and ensures that you see something on the map when you finish sketching a feature.The addGraphic function sets the appropriate symbol for the geometry type.See the <a href='https://developers.arcgis.com/javascript/jsapi/symbol-amd.html' target='_blank'>API Reference for symbols</a> to learn more about defining different symbols.</p>",
 					"url" : "#",
 					"sampleId" : "graphics_add"
 				}, {
@@ -364,17 +364,17 @@
 					"sampleId" : "widget_gauge_webmap"
 				}, {
 					"title" : "Geodesic buffers with ArcGIS.com webmap",
-					"description" : "Description",
+					"description" : "<p>This sample uses an ArcGIS Server 10.1 Geometry Service to generate geodesic buffers.</p><p>The ArcGIS API for JavaScript includes utilities to load data from webmaps authored using ArcGIS.com. This sample creates a map from an ArcGIS.com webmap, grabs some the data from one of the layers in the webmap (in this case, earthquake points) and sends it to an ArcGIS Server 10.1 geometry service to generate geodesic buffers. Because the server where the geometry servies resides is configured to allow <a href='http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing' target='_blank'>CORS</a>, a cross domain POST is done without a proxy.</p>",
 					"url" : "#",
 					"sampleId" : "ags_geodesic_buffers"
 				}, {
 					"title" : "Web map by ID",
-					"description" : "Description",
+					"description" : "<p>This sample displays a map generated using the <a href='http://www.arcgis.com/home/' target='_blank'>ArcGIS.com</a> map viewer. The map's author used the tools in the map viewer to select a basemap, add operational layers, define an initial extent and create popup windows.</p><p>The ArcGIS API for JavaScript has a utility method that allow you to use maps from ArcGIS.com in a JavaScript application: <code>esri/arcgis/utils.createMap</code>, which is used in this sample.</p>",
 					"url" : "#",
 					"sampleId" : "ags_createwebmapid"
 				}, {
 					"title" : "Web map using JSON",
-					"description" : "Description",
+					"description" : "<p>It is possible to use <code>esri/arcgis/utils.createMap</code> to create a map using an object. This is an alternative to other samples that create a map using the map id from ArcGIS.com. The code in this sample shows the following:</p>                        <ul><li>create a new map</li><li>set a title</li><li>specify a description</li><li>set an initial extent</li><li>defines layers the map will display</li></ul><p></p>                          <p>Note: You can retrieve the item definition from an ArcGIS.com item using <code>esri/arcgis/utils.getItem()</code></p><p>Once the map object is complete, it is used with createMap to build a map.</p>",
 					"url" : "#",
 					"sampleId" : "ags_createwebmapitem"
 				}
