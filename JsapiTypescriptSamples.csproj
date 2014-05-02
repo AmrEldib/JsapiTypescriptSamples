@@ -35,6 +35,7 @@
     <Content Include="navTemplate.html" />
     <Content Include="web.config" />
     <Content Include="widget_basemap\index.html" />
+    <Content Include="widget_gauge_webmap\index.html" />
     <Content Include="widget_home\index.html" />
     <Content Include="widget_legend\index.html" />
     <Content Include="widget_overviewmap\index.html" />
@@ -80,6 +81,8 @@
     <TypeScriptCompile Include="map_simple\simpleMap\main.ts" />
     <TypeScriptCompile Include="widget_basemap\basemapGallery\main.ts" />
     <TypeScriptCompile Include="widget_basemap\basemapGallery\BasemapGalleryController.ts" />
+    <TypeScriptCompile Include="widget_gauge_webmap\gaugeWebmap\main.ts" />
+    <TypeScriptCompile Include="widget_gauge_webmap\gaugeWebmap\GaugeWebmapController.ts" />
     <TypeScriptCompile Include="widget_home\homeButton\main.ts" />
     <TypeScriptCompile Include="widget_legend\legendWidget\LegendController.ts" />
     <TypeScriptCompile Include="widget_legend\legendWidget\main.ts" />
@@ -97,7 +100,10 @@
   <ItemGroup>
     <Reference Include="System.Web" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ags_editor\" />
+    <Folder Include="ags_fade_webmaps\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
