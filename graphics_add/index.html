@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <!--The viewport meta tag is used to improve the presentation and behavior of the samples 
+    on iOS devices-->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title>Shapes and Symbols</title>
+
+  <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">
+
+  <style>
+    #info {
+        top: 20px;
+        color: #444;
+        height: auto;
+        font-family: arial;
+        right: 20px;
+        margin: 5px;
+        padding: 10px;
+        position: absolute;
+        width: 115px;
+        z-index: 40;
+        border: solid 2px #666;
+        border-radius: 4px;
+        background-color: #fff;
+    }
+    html, body, #mapDiv {
+        padding:0;
+        margin:0;
+        height:100%;
+    }
+    button {
+        display: block;
+    }
+    </style>
+
+    <script src="http://js.arcgis.com/3.9/"></script>
+    <script>
+
+        require({
+            packages: [{
+                name: "AddGrahpics",
+                location: location.pathname.replace(/\/[^/]+$/, "") + "/addGraphics"
+            }]
+        }, ["AddGrahpics",
+            "dojo/domReady!"],
+            function (AddGrahpics) {
+                console.log("demo started");
+            });
+        </script>
+      </head>
+  
+      <body>
+    
+        <div id="info">
+          <div>Select a shape then draw on map to add graphic</div>
+          <button id="Point">Point</button>
+          <button id="Multipoint">Multipoint</button>
+          <button id="Line">Line</button>
+          <button id="Polyline">Polyline</button>
+          <button id="FreehandPolyline">Freehand Polyline</button>
+          <button id="Triangle">Triangle</button>
+          <button id="Extent">Rectangle</button>
+          <button id="Circle">Circle</button>
+          <button id="Ellipse">Ellipse</button>
+          <button id="Polygon">Polygon</button>
+          <button id="FreehandPolygon">Freehand Polygon</button>
+        </div>
+
+        <div id="mapDiv"></div>
+
+      </body>
+    </html>
