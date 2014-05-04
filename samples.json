@@ -15,61 +15,61 @@
 				}, {
 					"sampleId" : "geoenrichment_infographic",
 					"title" : "Geoenrichment - Infographic",
-					"description" : "Description",
+					"description" : "<p>The Infographic widget requests for GeoEnrichment data of a given location, and visualizes the results in a Infographics consisting of properly formatted charts and/or tables. This sample allows users to click any location on the map and returns the GeoEnrichment data (an age pyramid) of a 1-mile ring buffer area.</p><p><a href='http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/GeoEnrichment_Service_Overview/02r30000021r000000/' target='_blank'>GeoEnrichment</a> is a subscription based service available through ArcGIS Online. Log-in credentials are always required when executing a GeoEnrichment task. For demo purpose, this sample uses a helper method to define a proxy for a set of resources. All requests to geoenrich.arcgis.com are routed to the specified proxy url.</p><p><pre>esri.addProxyRule({<br/>urlPrefix: \"geoenrich.arcgis.com\",<br/>proxyUrl: \"/sproxy\"<br/>});</pre></p><p>When writing your own apps, remove this part from the code so your users will be able to sign in with their own credentials.</p>",
 					"url" : "#"
 				}, {
 					"sampleId" : "geoenrichment_carousel",
 					"title" : "Geoenrichment - InfographicsCarousel",
-					"description" : "Description",
+					"description" : "<p>The InfographicsCarousel widget requests for GeoEnrichment data of a given location, and visualizes the results in a collection of Infographics. This sample allows users to click any location on the map and returns the GeoEnrichment data (a one variable summary and an age pyramid) of a 5-mile driving buffer area. Use the 'previous' and 'next' button to switch between different infographics.</p><p><a href='http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/GeoEnrichment_Service_Overview/02r30000021r000000/' target='_blank'>GeoEnrichment</a> is a subscription based service available through ArcGIS Online. Log-in credentials are always required when executing a GeoEnrichment task. For demo purpose, this sample uses a helper method to define a proxy for a set of resources. All requests to geoenrich.arcgis.com are routed to the specified proxy url.</p><p><pre>esri.addProxyRule({<br/>urlPrefix: \"geoenrich.arcgis.com\",<br/>proxyUrl: \"/sproxy\"<br/>});</pre></p><p>When writing your own apps, remove this part from the code so your users will be able to sign in with their own credentials.</p>",
 					"url" : "#"
 				}, {
 					"sampleId" : "gp_resultmapservice",
 					"title" : "Geoprocessing with result map service",
-					"description" : "Description",
+					"description" : "<p>This sample uses a geoprocessing task that takes an input SQLQuery string and filters 911 calls to display only calls that match the query. The task also performs hotspot analysis on the query results and generates a hotspot raster.</p><p>The query results are returned as a map service which allows you to easily add the 911 incidents that match the query and the hotspot raster to the map. Note that in the code below a url to the result map service is constructed using the map service url with the result job id.</p>",
 					"url" : "#"
 				}, {
 					"title" : "Hotspot Analysis",
-					"description" : "Description",
+					"description" : "<p>The Find Hot Spots tool will determine if there is any statistically significant clustering in the spatial pattern of your data.</p><p><ul><li>Are your points (crime incidents, trees, traffic accidents) really clustered? How can you be sure?</li><li>Have you truly discovered a statistically significant hot spot (for spending, infant mortality, consistently high test scores) or would your map tell a different story if you changed the way it was symbolized?</li></ul></p><p>The Find Hot Spots tool will help you answer these questions with confidence.</p><p><a href='https://developers.arcgis.com/en/rest/analysis/api-reference/getting-started.htm' target='_blank'>Analysis</a> is a subscription based service available through ArcGIS Online. Log-in credentials are always required when executing a Analysis task. Please supply your own credentials to use this sample.</p>",
 					"url" : "#",
 					"sampleId" : "analysis_hotspot"
 				}, {
 					"title" : "LayerSwipe widget",
-					"description" : "Description",
+					"description" : "<p>Easily compare the content of multiple layers in a map using the LayerSwipe widget to reveal the contents of layer(s) on the map. The widget provides horizontal, vertical and scope viewing modes. To test out the various modes open the sample using the 'Explore in Sandbox' link then edit the LayerSwipe type constructor option to one of the alternate modes. For example, set type to 'scope' then press the run button to preview the scope option.</p><p><pre>var swipeWidget = new LayerSwipe({<br/>type: \"vertical\",<br/>map: map,<br/>layers: [swipeLayer]<br/>}, \"swipeDiv\");<br/>swipeWidget.startup();</pre></p>",
 					"url" : "#",
 					"sampleId" : "widget_swipe"
 				}, {
 					"title" : "Measurement",
-					"description" : "Description",
+					"description" : "<p>This sample shows how to add the Measurement widget to your application. The Measurement widget, new at version 2.3, provides tools for determining the x,y location and measuring area and distances. This sample shows how to create a new Measurement widget and associate it with the map.</p><p>Optionally you can define a custom line and point symbol that the measurement widget will use when drawing on the map. When snapping is enabled, the measurement tool honors this and will snap to features in the map.</p>",
 					"url" : "#",
 					"sampleId" : "widget_measurement"
 				}, {
 					"title" : "Point in polygon search",
-					"description" : "Description",
+					"description" : "<p>You can use the geometry service to determine spatial relationships between two sets of geometries. The query task can also calculate spatial relationships, but the geometry service exposes more relationship types and can be used with geometries that do not come from ArcGIS Server.</p><p>For example, this sample finds pizza restaurants from <a href='http://local.yahoo.com/' target='_blank'>Yahoo! Local</a> within a 3 minute drive of a point that you click. The pizza restaurants are not part of a map service. They are just graphics on the map whose locations come from Yahoo! The drive time polygon is not part of a map service either. It is returned as the result of a geoprocessing service.</p><p>Both the pizza restaurants and the drive time polygon are passed to the <a href='https://developers.arcgis.com/javascript/jsapi/geometryservice-amd.html#relation' target='_blank'>GeometryService.relation()</a> method. Notice that one of the parameters for this method is the relationship type. In this sample we're looking for restaurants within the drive time polygon. In other words, they satisfy the relationship type esri.tasks.GeometryService.SPATIAL_REL_WITHIN.</p><p>You can specify a callback function to which an array of results will be sent. The array contains references to pairs of geometries that satisfied the relationship type. Each item in the array has a graphic1 and graphic2 property, referring to the order in which the graphics were passed to the relation function.</p><p>The following lines of code highlights the pizza restaurant that fell inside the drive time polygon.</p><p><pre>var relatedGraphic = relations[i].graphic1;<br/>dojo.forEach(relations, function(relation) {<br/>  baseGraphics[relation.geometry1Index].setSymbol(sybmol);<br/>});</pre></p><p><b>Note:</b> Another simple way to check whether a point lies within a polygon is to use the <a href='https://developers.arcgis.com/javascript/jsapi/polygon-amd.html#contains' target='_blank'>Polygon.contains()</a> method.</p>",
 					"url" : "#",
 					"sampleId" : "util_relation"
 				}, {
 					"title" : "Points for labeling",
-					"description" : "Description",
+					"description" : "<p>As an alternative to the <a href='https://developers.arcgis.com/javascript/jsapi/labellayer-amd.html' target='_blank'>label layer</a>, you can create a label for one or more individual features by placing a text symbol at a given point. To do this, usethe geometry service to generate a point for placing a label inside a polygon.</p><p>To try this sample, draw a polygon on the map. When you submit the polygon, it's simplified so it won't throw errors if it overlaps itself. The <a href='https://developers.arcgis.com/javascript/jsapi/geometryservice-amd.html#labelPoints' target='_blank'>GeometryService.labelPoints()</a> method determines a point inside the polygon. The parameters are an array of polygon graphics to be labeled and a callback function specifying what to do with the label points. In most cases, you'll be associating each point with a <a href='https://developers.arcgis.com/javascript/jsapi/textsymbol-amd.html' target='_blank'>TextSymbol</a>, like this:</p><p><code>labelPoints[i].setSymbol(textSymbol);</code></p>",
 					"url" : "#",
 					"sampleId" : "util_label_point"
 				}, {
 					"title" : "Population zonal statistics",
-					"description" : "Description",
+					"description" : "<p>This sample uses geoprocessing to estimate the number of people within a polygon you draw on the map. Click Summarize Population, then hold down the mouse button and drag a polygon outline. When you release the button, the polygon will auto-complete and you'll see how many people are estimated to live within the polygon boundaries.</p><p>The population calculation is done through an ArcGIS Server geoprocessing service, which gives access to a model running on the server. In this sample, the model contains one tool, <a href='http://webhelp.esri.com/arcgisdesktop/9.3/index.cfm?topicname=Zonal_Statistics_as_Table' target='_blank'>Zonal Statistics as Table</a>. The tool sums the population of each cell within the polygon that you drew.</p><p>Depending on the complexity of the polygon, it's possible that your request for information will exceed the 2000 character limit imposed by some web browsers. For this reason, the following lines are included to reference a proxy page:</p><p><pre>esriConfig.defaults.io.proxyUrl = \"/arcgisserver/apis/javascript/proxy/proxy.ashx\";<br/>esriConfig.defaults.io.alwaysUseProxy = false;</pre></p><p>Notice that the Geoprocessor constructor requires the URL to the geoprocessing service. You can enter this URL in a Web browser (<a href='http://sampleserver1a.arcgisonline.com/ArcGIS/rest/services/Demographics/ESRI_Population_World/GPServer/PopulationSummary' target='_blank'>http://sampleserver1a.arcgisonline.com/ArcGIS/rest/services/Demographics/ESRI_Population_World/GPServer/PopulationSummary</a>) to see the Services Directory page containing information about the model's parameters.</p><p>This is a relatively simple model with just one input parameter, a GPFeatureRecordSetLayer, which you can represent with a FeatureSet in the ArcGIS JavaScript API. This sample uses a draw toolbar to help draw and capture the polygon. Notice that when you click the Summarize Population button, the toolbar is activated and the zoom level slider is hidden so that it won't interfere with the drawing.</p><p><code>&lt;div dojoType=\"dijit.form.Button\" id=\"drawPoly\" onclick=\"toolbar.activate(esri.toolbars.Draw.FREEHAND_POLYGON); map.hideZoomSlider();\"&gt;Summarize Population&lt;/div&gt;</code></p><p>It takes several lines of code to get this polygon into the feature set required by the model. First, the polygon starts as geometry captured by the toolbar. Then this geometry is used to create a graphic. The graphic is then added to an array of features, which is designated as the features in the FeatureSet.</p><p>The results are returned as an array of ParameterValue objects. In this model, there is only one return parameter, which is a FeatureSet. One of the attributes of the items in the feature set is the sum of the population in the polygon.</p><p>This sample uses a Dojo <a href='http://api.dojotoolkit.org/jsdoc/dijit/HEAD/dijit.Dialog' target='_blank'>Dialog</a> Dijit to display the result, a more aesthetic alternative to a typical alert box.</p>",
 					"url" : "#",
 					"sampleId" : "gp_zonalstats"
 				}, {
 					"title" : "Service area task",
-					"description" : "Description",
+					"description" : "<p>This sample shows how you can send some input values to a GIS model on an ArcGIS Server and get the results back in your web application. In this example, the model calculates drive time polygons from a point that you click on the map. This type of analysis could be useful for a business that wanted to know how many people live within a 1, 2, and 3 minute drive, for example.</p><p>This model is exposed through an ArcGIS Server <a href='http://webhelp.esri.com/arcgisserver/9.3/dotNet/index.htm#geoprocessing/an_ove-2102662086.htm' target='_blank'>geoprocessing service</a>. To get an idea of what inputs and outputs are used in the model, see the Services Directory page for the <a href='http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Network/ESRI_DriveTime_US/GPServer/CreateDriveTimePolygons' target='_blank'>CalculateDriveTimePolygons</a> service. Besides the default information, the model author has provided additional documentation that you can access by clicking the 'Help URL' link on the page.</p><p>To access your models from ArcGIS Server, you'll need to create a <a href='https://developers.arcgis.com/javascript/jsapi/geoprocessor-amd.html' target='_blank'>geoprocessing task</a>:</p><p><code>gp = new esri.tasks.Geoprocessor(\"...\");</code></p><p>You can use <a href='https://developers.arcgis.com/javascript/jshelp/ags_rest.html'>Services Directory</a> to discover the URLs to your own geoprocessing services.</p><p>When you use a geoprocessing task, you'll typically configure a set of input parameters, then execute the task.</p><p><pre>var params = {<br/>  \"Input_Location\": featureSet,<br/>  \"Drive_Times\": driveTimes<br/>};<br/>gp.execute(params, getDriveTimePolys);</pre></p><p>You can optionally include a callback function that runs when the task is done executing. In this example the callback function <b>getDriveTimePolys</b> configures the symbols for the result polygons and adds them to the map.</p>",
 					"url" : "#",
 					"sampleId" : "gp_servicearea"
 				}, {
 					"title" : "Summarize Nearby Analysis",
-					"description" : "Description",
+					"description" : "<p>The Summarize Nearby widget finds features that are within a specified distance of features in the input layer. This sample demonstrates how it can be used to calculate the socioeconomic conditions within five miles of five proposed new store locations.</p><p><a href='https://developers.arcgis.com/en/rest/analysis/api-reference/getting-started.htm' target='_blank'>Analysis</a> is a subscription based service available through ArcGIS Online. Log-in credentials are always required when executing a Analysis task.Please supply your own credentials to use this sample.</p>",
 					"url" : "#",
 					"sampleId" : "analysis_summarizenearby"
 				}, {
 					"title" : "Viewshed",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates using the geoprocessor to calculate a <a href='http://en.wikipedia.org/wiki/Viewshed' target='_blank'>viewshed</a>. Click any point on the map to see all areas that are visible within 5 miles of that point. It may take a few seconds for the model to run and send back the results.</p> <p>The viewshed calculation is accomplished through an ArcGIS Server <a href='http://resources.arcgis.com/en/help/main/10.1/index.html#//00570000005w000000' target='_blank'>geoprocessing service</a>. The service provides access to a model (task) on the server that includes the viewshed tool. The constructor to the <a href='https://developers.arcgis.com/javascript/jsapi/geoprocessor-amd.html'>Geoprocessor</a> requires the URL of the task (<a href='http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Elevation/ESRI_Elevation_World/GPServer/Viewshed' target='_blank'>http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Elevation/ESRI_Elevation_World/GPServer/Viewshed</a>). You can use the <a href='https://developers.arcgis.com/javascript/jshelp/ags_rest.html'>Services Directory</a> to discover the URLs to your own geoprocessing services and the tasks within them.</p> <p>When the map is clicked, an event listener calls the function <b>computeViewShed</b>, which adds a SimpleMarkerSymbol at the location of the click. The function also sets up the two parameters for the task. The first parameter is the clicked point and the second is a buffer distance that keeps the viewshed a reasonable size. In this example the viewshed is calculated up to 5 miles beyond the clicked point.</p> <p>The first line below sets up the parameters in the correct format for the Geoprocessor task and the second line executes the task. The execute method is used here because the task is synchronous, meaning that the user waits for the results to appear before doing anything else. For large jobs, you can call submitJob to run the task asynchronously, allowing you to get the results later.</p> <p><code>var params = { \"Input_Observation_Point\":featureSet, \"Viewshed_Distance\":vsDistance };gp.execute(params, drawViewshed);</code></p> <p>The execute method above names a callback function, <b>drawViewshed</b> that is called when the results are available. This function defines a symbol for the results and adds them to the map. The loop below is necessary in case the results are returned as a multi-part feature. This is very likely to happen with a viewshed layer because rough terrain can leave separate patches of visible area.</p> <p><code>for (var f=0, fl=features.length; f&lt;fl; f++) { var feature = features[f]; feature.setSymbol(polySymbol); map.graphics.add(feature);}</code></p> ",
 					"url" : "#",
 					"sampleId" : "gp_viewshed"
 				}
@@ -79,22 +79,22 @@
 			"categoryId" : "section_directions",
 			"samples" : [{
 					"title" : "Basic service area",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates how to work with ServiceAreaTask added at version 2.0. This sample uses the task to calculate the service area around an input location. A network service area is a region that encompasses all accessible streets within the specified range. The ServiceAreaParameters object is used to define the parameters used to calculate the service area. In the snippet below the defaultBreaks property is used to define that a two minute drive time service area should be calculated.</p> <p><code>params = new esri.tasks.ServiceAreaParameters(); params.defaultBreaks= [2]; params.outSpatialReference = map.spatialReference; params.returnFacilities = false;</code></p> <p>The input location is defined by creating a new facility when a user clicks on the map. Once the facility is generated a new service area request is created and sent to the server. After the route is solved, the results are returned to the client and the result is added to the map's graphics layer.</p>",
 					"url" : "#",
 					"sampleId" : "routetask_basic_servicearea"
 				}, {
 					"title" : "Directions",
-					"description" : "Description",
+					"description" : "<p>The Directions widget makes it easy to calculate directions between two or more input locations. The resulting directions are displayed with detailed turn-by-turn instructions. and if a map is associated with the widget the directions route and stops are displayed on the map. The stops displayed on the map are interactive you can click to display a popup with stop details or drag the stop to a new location to recalculate the route.The Directions widget uses the <a href='http://route.arcgis.com/arcgis/index.html' target='_blank'>World Network Analysis</a> as the default service used to calculate driving directions. This is a subscription based service available through ArcGIS Online. If you have an ArcGIS Server Network Analysis service that you want to use to calculate directions specify the url to the service using the Directions widget routeTaskUrl constructor parameter. This sample uses a helper method, added at v3.4, that defines a proxy for a set of resources. In this example all requests to route.arcgis.com are routed to the specified proxy url.</p> <p><code>esri.addProxyRule({   urlPrefix: &quot;route.arcgis.com&quot;,   proxyUrl: &quot;/sproxy&quot; });</code></p><p>For demonstration purposes this sample uses a proxy that has been setup to use <a href='https://developers.arcgis.com/en/authentication/app-logins.html' target='_blank'>app logins and OAuth2 </a> so you aren't required to log-in with an ArcGIS Online organizational subscription to run the sample. </p>",
 					"url" : "#",
 					"sampleId" : "widget_directions_basic"
 				}, {
 					"title" : "Find closest facilities",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates how to work with ClosestFacilityTask added at version 2.0. The ClosestFacilityTask is used to find the closest facilities around an input location. The ClosestFacilityParameters object is used to define how many facilities to find and various other properties such as travel direction and cutoff. In the snippet below various ClosestFacilityParameters are set:</p><p><pre>params = new esri.tasks.ClosestFacilityParameters();<br/>params.defaultCutoff = 3.0;<br/>params.returnIncidents = false;<br/>params.returnRoutes = true;<br/>params.returnDirections = true;</pre></p><p>The input location is defined by creating a new incident when a user clicks on the map. Once the incident is generated a new closest facility request is created and sent to the server. After the route is solved, the results are returned to the client and displayed in the map's graphics layer</p><p><pre>var inPoint = new esri.geometry.Point(evt.mapPoint.x,evt.mapPoint.y,map.spatialReference);<br/>var features = [];<br/>features.push(location);<br/>var incidents = new esri.tasks.FeatureSet();<br/>incidents.features = features;<br/>params.incidents = incidents;</pre></p>",
 					"url" : "#",
 					"sampleId" : "routetask_closest_facility"
 				}, {
 					"title" : "World traffic",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates how to display near real-time traffic information for different regions in the world on a map. The data is updated every 5 minutes. This map service requires an ArcGIS Online organizational subscription.</p> <p>The color coded traffic map layer can be used to represent relative traffic speeds; this is a common type of a map for online services and is used to provide context for routing, navigation and field operations. The color coded map leverages historic, real time and predictive traffic data. A color coded traffic map can be requested for the current time and any time in the future. A map for a future request might be used for planning purposes.</p> <p>The map also includes dynamic traffic incidents showing the location of accidents, construction, closures and other issues that could potentially impact the flow of traffic. Traffic incidents are commonly used to provide context for routing, navigation and field operations. Incidents are not features; they cannot be exported and stored for later use or additional analysis.</p> <p>The service works globally and can be used to visualize traffic speeds and incidents in many countries. Check the <a href='http://www.arcgis.com/home/webmap/viewer.html?webmap=db400fb09fcf4c24b1ac046468ec2a49&amp;extent=-142.207,-43.4529,152.0508,70.729' target='_blank'>service coverage web map</a> to determine availability in your area of interest. In the coverage map, the countries color coded in green support visualizing live traffic. The support for traffic incidents can be determined by identifying a country. For detailed information on this service, including a data coverage map, visit the <a href='http://resources.arcgis.com/en/help/arcgis-online-network-analysis-rest-api/' target='_blank'>Network Analysis Services documentation</a>.</p> <p>Important Note: The World Traffic map service is available for users with an ArcGIS Online organizational subscription. To access this map service, you'll need to sign in with an account that is a member of an organizational subscription. If you don't have an organizational subscription, you can create a new account and then sign up for a <a href='https://www.arcgis.com/about/trial.html' target='_blank'> 30 day trial of ArcGIS Online</a>.</p><p>For demonstration purposes this sample uses a proxy that has been setup to use <a href='https://developers.arcgis.com/en/authentication/app-logins.html' target='_blank'>app logins and OAuth2</a> so you aren't required to log-in with an ArcGIS Online organizational subscription to run the sample.</p>",
 					"url" : "#",
 					"sampleId" : "ags_traffic"
 				}
@@ -104,32 +104,32 @@
 			"categoryId" : "section_dynamiclayers",
 			"samples" : [{
 					"title" : "Change attribute used for a renderer",
-					"description" : "Description",
+					"description" : "<p>This functionality requires an ArcGIS Server 10.1 service.</p> <p>Dynamic layers provide the ability to change the renderer(s) for layers in a dynamic map service. In this sample, a drop-down list is populated with attribute field names for a layer that is displayed on the map using an ArcGIS Server 10.1 dynamic layer and a dynamic map service layer. When the selected field changes, a new map image is requested using the new field as the basis for the layer's renderer.</p>",
 					"url" : "#",
 					"sampleId" : "renderer_dynamic_layer_change_attribute"
 				}, {
 					"title" : "Class breaks renderer with dynamic layer",
-					"description" : "Description",
+					"description" : "<p>This functionality requires an ArcGIS Server 10.1 service.</p> <p>Dynamic layers provide the ability to change the renderer(s) for layers in a dynamic map service. In this sample, when the range specified by the slider changes, a new map images is requested and the map updates to show features that fall within the new range. This functionality was previously possible using feature layers and renderers. The advantage to using a dynamic layer as opposed to a feature layer is that dynamic layers perform much better when a layer has thousands of features.</p>",
 					"url" : "#",
 					"sampleId" : "renderer_dynamic_layer_class_breaks"
 				}, {
 					"title" : "Dynamic map service",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates adding a map that is drawn by the server each time the user zooms or pans. Such a service does not have a <a href='http://webhelp.esri.com/arcgisserver/9.3/dotNet/what_is_map_caching.htm' target='_blank'>cache</a> of tiles and is called a dynamic map service layer. In the ArcGIS JavaScript API dynamic map services are represented by <a href='https://developers.arcgis.com/javascript/jsapi/arcgisdynamicmapservicelayer-amd.html' target='_blank'>ArcGISDynamicMapServiceLayer</a>.</p> <p>Dynamic map services perform slower than tiled map services. Only use dynamic map services if you are unable to create a cache of tiles. You might not be able to create a cache if your data changes faster than you can update the cache, or if you require real-time display of your data.</p> <p>Notice that the constructor for the dynamic map service layer requires the URL of the service's REST endpoint (http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Demographics/ESRI_Population_World/MapServer). You can use the <a href='https://developers.arcgis.com/javascript/jshelp/ags_rest.html' target='_blank'>Services Directory</a> to find out the URLs for your map services.</p> <p>Notice that the layer is made partially transparent using its <a href='https://developers.arcgis.com/javascript/jsapi/layer-amd.html#setOpacity' target='_blank'>setOpacity</a> method. Then the map's <a href='https://developers.arcgis.com/javascript/jsapi/layer-amd.html#addlayer-amd' target='_blank'>addLayer</a> method adds the layer to the map.</p>",
 					"url" : "#",
 					"sampleId" : "map_dynamic"
 				}, {
 					"title" : "Layer definitions on a dynamic map service",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates how to use layer definitions to limit the information from a layer that gets displayed on the map. To appreciate what this sample does, it's helpful to look at the Services Directory page for the <a href='http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Demographics/ESRI_Census_USA/MapServer' target='_blank'>ESRI_Census_USA</a> service used in this map. Examine the list of layers in the map. Now notice that this line of code limits the visible layers to states and counties.</p> <p><pre>dynamicMapServiceLayer.setVisibleLayers([5,4,3]);</pre></p> <p>This data covers the United States, so why does only the state of Kansas appear when you run the sample? This is due to layer definitions, which are SQL expressions that limit the data shown on the map. In this sample, the layer definitions limit the states to Kansas and the counties to those in Kansas with a population over 25000.</p> <p>The following code adds layer definitions to an array, then applies the definitions using the <a href='https://developers.arcgis.com/javascript/jsapi/arcgisdynamicmapservicelayer-amd.html#setlayerdefinitions'>ArcGISDynamicMapServiceLayer.setLayerDefinitions()</a> method. Notice that in the array, the index of a definition matches its corresponding layer index in the map:</p> <p><pre>var layerDefs = [];<br/>layerDefs[5] = \"STATE_NAME='Kansas'\";<br/>layerDefs[4] = \"STATE_NAME='Kansas' and POP2007&gt;25000\";<br/>layerDefs[3] = \"STATE_NAME='Kansas' and POP2007&gt;25000\";<br/>dynamicMapServiceLayer.setLayerDefinitions(layerDefs);</pre></p> <p>If you're new to building SQL expressions, a helpful resource is <a href='http://webhelp.esri.com/arcgisdesktop/9.3/index.cfm?TopicName=About_building_an_SQL_expression' target='_blank'>About building an SQL expression</a> in the ArcGIS Desktop Help.</p> <p>Note that you cannot set layer definitions on <a href='https://developers.arcgis.com/javascript/jsapi/arcgistiledmapservicelayer-amd.html'>ArcGISTiledMapServiceLayers</a>. These layers use caches of pre-rendered image tiles. Although tiled map services are faster, you are limited to viewing the map images on the tiles.</p>",
 					"url" : "#",
 					"sampleId" : "map_multiplelayerdef"
 				}, {
 					"title" : "Reorder layers in map service",
-					"description" : "Description",
+					"description" : "<p>This functionality requires an ArcGIS Server 10.1 service.</p> <p>Layers published in a dynamic map service can be re-ordered using dynamic layers. This sample showcases this capability. To re-order layers, click and drag a layer name to a new position. When a layer name is dropped to a new position in the list, a request is made to get an updated map image.</p> <p>ArcGIS Server 10.1 also provides the ability to work with data in a registered workspace but not published via a map service. This gives administrators and developers the flexibility to add data to apps that isn't visible from the REST services directory. The caveat is that developers need to know the workspace name and data layer/table name to be able to add it to a web application. To see this in action, click the 'Add Lakes' button. The lakes layer can then be reordered within the map service.</p>",
 					"url" : "#",
 					"sampleId" : "layers_dynamic_reorder"
 				}, {
 					"title" : "WMS - resource info",
-					"description" : "Description",
+					"description" : "<p>This sample shows how to work with an OGC Web Map Service (WMS). When WMSLayers are added to the map only the specified layers are displayed. The code below creates a new <code>WMSLayer</code> then uses the visibleLayers constructor option to specify which layers are displayed.</p><p><pre >var wmsLayer = new WMSLayer(wmsURL,{<br/>  resourceInfo: resourceInfo,<br/>  visibleLayers: [&quot;1&quot;,&quot;2&quot;]<br/>});</pre></p><p>Note that in the code above a <code>resourceInfo</code> object is also provided. The resourceInfo object is used to define information about the service such as extent, layers, version etc. The benefit to specifying the resource info is that a proxy is not needed to work with WMS layers.</p><p><pre>var layer1 = new WMSLayerInfo({name:&quot;1&quot;,title:&quot;Rivers&quot;});<br/>var layer2 = new WMSLayerInfo({name:&quot;2&quot;,title:&quot;Cities&quot;});<br/>var resourceInfo = {<br/>  extent: new Extent(-126.405,31.02,-109.66,41.52,{wkid: 4326}),<br/>  layerInfos: [layer1,layer2]<br/>};</pre></p>",
 					"url" : "#",
 					"sampleId" : "layers_wmsresourceinfo"
 				}
@@ -139,47 +139,47 @@
 			"categoryId" : "section_editing",
 			"samples" : [{
 					"title" : "Attachment editor",
-					"description" : "Description",
+					"description" : "<p>Create, view and delete attachments using the Attachment Editor widget. In the code sample below an attachment editor is created and set to display in the map's info window.Clicking on a feature in the map displays an info window that includes the attachment editor.</p>",
 					"url" : "#",
 					"sampleId" : "ed_attachments"
 				}, {
 					"title" : "Drawing tools",
-					"description" : "Description",
+					"description" : "<p>This sample shows how you can use a <a href='https://developers.arcgis.com/javascript/jsapi/draw-amd.html'>draw toolbar</a> to sketch many kinds of geometries on the map. This toolbar is included with the ArcGIS JavaScript API.</p> <p>The toolbar is not a user interface component that you automatically see on the page. Instead, it's a helper class that you can use to let people sketch geometries on the map. It saves you the effort of writing the code for sketching each geometry type. You just activate the type of geometry you want people to sketch. In this example, each HTML button activates a different geometry type.</p> <p>When you click for example the &quot;Point&quot; button, the toolbar activates the point geometry. Alternatively you could allow people to choose the geometry type from a dropdown list, a set of radio buttons, or some other control.</p> <p>In this example, the toolbar's &quot;onDrawEnd&quot; event ensures that you see something on the map when you finish sketching a feature.</p> <p>The <b>addGraphic</b> function sets the appropriate symbol for the geometry type. In this example, the symbol is taken from a dropdown list. Each item of the list is a symbol defined on one line.</p> <p>See the <a href='https://developers.arcgis.com/javascript/jshelp/inside_renderers.html' target='_blank'>conceptual help for symbols</a> to learn more about defining different symbols.</p>",
 					"url" : "#",
 					"sampleId" : "toolbar_draw"
 				}, {
 					"title" : "Edit without editor widget",
-					"description" : "Description",
+					"description" : "<p>The template picker is an out of the box widget that displays a gallery of templates from one or more feature layers. The template picker displays a symbol and label for each type in the feature layer. The editor widget uses the template picker to provide template based editing so in most cases you'll want to use the editor widget to take advantage of all the functionality the editor provides (attribute editing, automatic updates and editing tools). In this example, the template picker is used without the editor so the developer is responsible for updating features after they are modified.</p> <p>To create new features, select the desired template from the TemplatePicker then draw a new feature on the map. This sample uses the Draw toolbar to sketch the new feature then in the toolbar's onDrawEnd event the edits are saved by calling <code>FeatureLayer.applyEdits()</code>.</p><p>This sample also includes logic to delete features and edit vertices. The edit toolbar is activated when you double-click on a graphic. Double-clicking enables the edit toolbar with the <code>EDIT_VERTICES</code> constant and you'll see vertices and ghost vertices appear on the map. You can delete features by holding the CTRL key while clicking a graphic. The layer's click event checks to see if you've pressed the CTRL key, if so applyEdits is called and the selected graphic is added to the array of features to delete.</code><br /></p>",
 					"url" : "#",
 					"sampleId" : "ed_feature_creation"
 				}, {
 					"title" : "Editing tools",
-					"description" : "Description",
+					"description" : "<p>This sample shows how you can use the <a href='https://developers.arcgis.com/javascript/jsapi/edit-amd.html'>edit toolbar</a> to edit graphics on the map.</p> <p>The toolbar is not a user interface component that you automatically see on the page. Instead, it's a helper class that you can use to allow users to edit graphics on the map. It saves you the effort of writing the code for editing, moving, scaling and rotating geometries.</p> <p>To test this sample:</p> <p><ul><li>Specify the types of operations you want to perform, you can opt to edit vertices and move, rotate or scale graphics.</li><li>Click on a graphic to activate the edit toolbar.</li><li>Modfiy the graphic.</li><li>Click outside the graphic to deactivate the toolbar.</li></ul></p>",
 					"url" : "#",
 					"sampleId" : "toolbar_edit"
 				}, {
 					"title" : "Editor widget with simple toolbar",
-					"description" : "Description",
+					"description" : "<p>This sample shows how to edit multiple feature layers using the Editor widget.The editor widget is highly customizable, developers can add and remove functionality depending on their editing use case. In this sample, you can edit existing hydrologic features or create new ones.</p> <p>The editor widget has an optional toolbar that lets the developer define additional functionality they want to include in the editing application. In this sample the freehand polygon and polyline drawing tools are added to provide end users the ability to sketch features as if they were drawing them with a pencil. The reshape tool is also added so end-users can easily adjust the shape of existing features.</p> <p><pre>var settings = {<br/>  map: map,  templatePicker: templatePicker,<br/>  geometryService: new esri.tasks.GeometryService(&quot;http://sampleserver3.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer&quot;),<br/>  layerInfos: layers,<br/>  toolbarVisible: true,<br/>  createOptions: {<br/>    polylineDrawTools: [ esri.dijit.editing.Editor.CREATE_TOOL_FREEHAND_POLYLINE ],<br/>    polygonDrawTools: [ esri.dijit.editing.Editor.CREATE_TOOL_FREEHAND_POLYGON ]<br/>  },<br/>  toolbarOptions: {<br/>    reshapeVisible: true<br/>  }<br/>};</pre></p> <p>Note that a custom template picker is defined in the settings object. This is useful when you want to modify the default appearance of the template picker. In this case the number of columns is set and the template picker determines the appropriate number of rows.</p> <p><pre>var templatePicker = new esri.dijit.editing.TemplatePicker({<br/>  featureLayers: templateLayers,<br/>  grouping: true,<br/>  rows: 'auto',<br/>  columns: 3<br/>},'divTemplateDijit');<br/>templatePicker.startup();</pre></p> <p>After defining the desired functionality you pass the settings to the params object then pass that into the Editor's constructor.</p> <p><pre>var params = {settings: settings};<br/>var myEditor = new esri.dijit.editing.Editor(params,'divFeatureServiceDijit');<br/>myEditor.startup();</pre></p> <p>This samples enables snapping, added at version 2.3, using the <code>map.enableSnapping()</code> method. Snapping can be disabled using <code>map.disableSnapping()</code>. In this snippet snapping is enabled for the editor and several snapping options are specified.</p> <p><pre>map.enableSnapping({<br/>  snapPointSymbol: sms,<br/>  tolerance: 20<br/>});</pre></p>",
 					"url" : "#",
 					"sampleId" : "ed_simpletoolbar"
 				}, {
 					"title" : "Move and edit vertices",
-					"description" : "Description",
+					"description" : "<p>This sample shows how to use the edit toolbar to move and edit vertices. The edit toolbar is a non-ui component that provides events that simplify the process of moving and editing vertices. To activate the toolbar, pass in a graphic and a constant defining the type of editing you want to perform.</p><p>The map displays polygons representing fire perimeter boundaries. To edit a boundary, zoom-in and double-click to activate the edit toolbar.</p><p>Note that once you double-click the feature both vertices and ghost vertices (white) appear. Once the vertices are active you do the following:</p><p></p><ul><li>Drag a vertex to move it to a new location.</li><li>Right-click to delete a vertex.</li><li>Drag a ghost vertices to add a new point.</li></ul><p></p><p>Double-click the feature to exit editing and have changes pushed back to the service.</p>",
 					"url" : "#",
 					"sampleId" : "ed_toolbar"
 				}, {
 					"title" : "Query and edit related records",
-					"description" : "Description",
+					"description" : "<p>How to query and edit related records. The sample has an operational layer that displays service incidents for the city of San Francisco, including graffiti complaints, damaged streets and sidewalks, and requests for city services. The application listens for an event, layers-add-result, which fires after layers added with map.addLayers() have been added to the map.</p><p>To query and edit a related table, create a RelationshipQuery and specify the outfields and relationship id. The relationship id is the id of the related table of interest. You can use the Services Directory to find the relationship id. The related table has a field called <code>AGREE_WITH_INCIDENT</code> that contains a numeric value defining how many people agree that the incident is important.</p><p>When you click an incident an InfoWindow is displayed with attribute information and a clickable image. The displayed attribute information is from both the table and related tables. Clicking on the image executes a JavaScript function that edits the table by incrementing the AGREE_WITH_INCIDENT field and calling applyEdits to update the table.</p> ",
 					"url" : "#",
 					"sampleId" : "ed_relatededits"
 				}, {
 					"title" : "Template picker widget",
-					"description" : "Description",
+					"description" : "<p>This sample shows how to configure the template picker widget to display templates for the specified feature layers. The code listens for the <code>selection-change</code> event and displays the name of each selected template.</p>",
 					"url" : "#",
 					"sampleId" : "ed_template_picker"
 				}, {
 					"title" : "Using the attribute inspector",
-					"description" : "Description",
+					"description" : "<p>The Attribute Inspector is a widget that allows you to display and edit the selected features from one or more feature layers. If the data has subtypes or domains those are honored by the attribute inspector.</p> <p>The attribute inspector provides the following:</p><ul><li>Performs validation</li><li>Displays coded-value domains in drop down lists</li><li>Shows a date picker (calendar) for date values.</li></ul> <p>If you are using the attribute inspector outside of the editor widget you are responsible for applying the changes to your feature service. Modifying an attribute fires the <a href='https://developers.arcgis.com/javascript/jsapi/attributeinspector-amd.html#onattributechange'>attribute-change</a> event which provides access to the updated feature, the name of the field that was edited and the new value. In this sample we store the changed value each time an attribute is updated.</p>",
 					"url" : "#",
 					"sampleId" : "ed_attribute_inspector"
 				}
@@ -189,27 +189,27 @@
 			"categoryId" : "section_geocoding",
 			"samples" : [{
 					"title" : "Geocode an address",
-					"description" : "Description",
+					"description" : "<p>This example allows you to enter an address, then displays the location of matching addresses. This is commonly known as geocoding. In the ArcGIS JavaScript API, you use the <a href='https://developers.arcgis.com/javascript/jsapi/locator-amd.html' target='_blank'>Locator</a> class to perform geocoding.</p> <p>The Locator constructor requires the URL of an ArcGIS Server geocode service. A geocode service represents an address locator that has been made available on the server. You can use the <a href='https://developers.arcgis.com/javascript/jshelp/ags_rest.html'>Services Directory</a> to discover the URL to your own geocode service.</p> <p>When the user clicks the Locate button, the <b>locate</b> function is called. This function uses the value the user entered into the address text box to find that location on the map.</p> <p>The locator begins searching for matches when the <b>addressToLocations</b> method is called. W<span style='line-height: 1.3846153846153846;'>hen the locator finishes looking for matches, the function </code><b>showResults</b><span style='line-height: 1.3846153846153846;'>is called, which adds address candidates to the map that have a score greater than 80. The address candidates are represented by an array of AddressCandidate objects that are passed to the listener's callback function. Each contains the point location of the address, which you can associate with a new graphic.</code></p> <p>This example uses an InfoTemplate to define how the address information will be reported back to the user. The address matches are placed on the map as graphics, which by default show an InfoWindow when clicked. The InfoTemplate defines the format of the text to be displayed in the InfoWindow. In this sample the InfoTemplate is configured to display the address of the match followed by its score.</p>",
 					"url" : "#",
 					"sampleId" : "locator_address"
 				}, {
 					"title" : "Geocode details",
-					"description" : "Description",
+					"description" : "<p>This sample shows how to geocode an address using the locator from <a href='http://tasks.arcgis.com/' target='_blank'>http://tasks.arcgis.com</a>. To use the sample enter an address then click the Locate button. The map will geocode the address and zoom to that location. The resulting location is displayed on the map and the location information is displayed in various formats including GeoRSS, Esri Json and GeoJSON.</p> <p>The sample also displays the current map extent for the results. The extent is in JSON format and can be copied to use as the extent for your mapping applications.</p>",
 					"url" : "#",
 					"sampleId" : "locator_details"
 				}, {
 					"title" : "Geocoder",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates how to use the Geocoder widget to simplify the process of finding locations on a map.</p>",
 					"url" : "#",
 					"sampleId" : "locator_simple"
 				}, {
 					"title" : "Geocoder with custom service",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates how to specify an ArcGIS Locator service to use with the Geocoder widget. This service accepts a parcel id and once its entered it will zoom to that location.</p>",
 					"url" : "#",
 					"sampleId" : "locator_service"
 				}, {
 					"title" : "Reverse geocode",
-					"description" : "Description",
+					"description" : "<p>Reverse geocoding determines the address of a given point on a map. This sample shows how to do reverse geocoding with the ArcGIS JavaScript API.</p><p>Both reverse geocoding and regular geocoding require use of the <code>Locator</code> class and an ArcGIS Server <code>geocode service</code>. To reverse geocode, you call the <code>locationToAddress</code> method (as opposed to <code>addressToLocations</code> for regular geocoding). The following sample shows how to add a listener that captures the mouse click event and calls <code>locationToAddress</code> for the clicked point.</p><p>A listener for the <code>location-to-address-complete</code> event then passes the best <code>AddressCandidate</code> to a callback function. That function then associates the candidate's point with a graphic and adds it to the map. The function also uses an <code>InfoTemplate</code> to format an <code>InfoWindow</code> that will appear when the graphic is clicked. Notice that the map point of the address result needs to be converted to a screen point in order to anchor the InfoWindow.</p>",
 					"url" : "#",
 					"sampleId" : "locator_reverse"
 				}
@@ -224,37 +224,37 @@
 					"sampleId" : "graphics_add"
 				}, {
 					"title" : "Create circles",
-					"description" : "Description",
+					"description" : "<p>Create geodesic or planar circles using the esri/geometry/Circle module (added at version 3.8 of the JS API).</p>",
 					"url" : "#",
 					"sampleId" : "graphics_create_circles"
 				}, {
 					"title" : "Display context menu",
-					"description" : "Description",
+					"description" : "<p>This sample shows how to display a context menu when a user right-clicks the map or a graphic. Menu's are created using Dojo's <a href='http://dojotoolkit.org/reference-guide/dijit/Menu.html' target='_blank'>dijit/Menu</a>. This code snippet shows how to create a new menu and calculates the location on the map where the user right-clicked.</p><p><pre>ctxMenuForMap = new Menu({<br/>  onOpen: function(box) {<br/>    currentLocation = getMapPointFromMenuPosition(box);<br/>    editToolbar.deactivate();<br/>  }<br/>});</pre></p><p>The right-click location is used to create a new graphic and add it to the map.</p><p><pre>ctxMenuForMap.addChild(new MenuItem({<br/>  label: \"Add Point\",<br/>  onClick: function(evt) {<br/>    var graphic = new Graphic(geometryJsonUtils.fromJson(currentLocation.toJson()), symbol);<br/>    map.graphics.add(graphic);<br/>  }<br/>}));</pre></p>",
 					"url" : "#",
 					"sampleId" : "graphics_contextmenu"
 				}, {
 					"title" : "Graphics with undo redo",
-					"description" : "Description",
+					"description" : "<p>Use the UndoManager, a utility object, that allows you to incorporate undo/redo functionality into your application with a custom operation. When you create the UndoManager you can specify the number of operations that will be maintained on the undo/redo stack. There are several out-of-the-box operations: Add, Delete, Update, Cut and Union. In this sample we create a custom operation by inheriting from the OperationBase class. This sample creates an Add Graphic operation that is used to add undo redo behavior to an application that creates graphics.</p><p>Each time a graphic is added or removed from the application a new operation is added to the UndoManager.</p><p>Note that when creating a new operation we specify the graphics layer and the graphic. Those values are used by the custom operation to undo or redo the operation.</p>",
 					"url" : "#",
 					"sampleId" : "graphics_undoredo"
 				}, {
 					"title" : "Point clustering",
-					"description" : "Description",
+					"description" : "<p>Point clustering has been implemented in this sample with a custom layer named extras.ClusterLayer. This custom layer subclasses esri.layers.GraphicsLayer. Symbology for clusters is managed using <a href='https://developers.arcgis.com/javascript/jsapi/renderer-amd.html' target='_blank'>renderers</a>. A <a href='https://developers.arcgis.com/javascript/jsapi/classbreaksrenderer-amd.html' target='_blank'>class breaks renderer</a> is recommended. For constructor options, public properties as well as layer methods, please refer to the comments in the ClusterLayer.js file.</p><p>If using IIS as your web server, please <a href='http://stackoverflow.com/q/332988/1934' target='_blank'>configure your IIS instance to serve JSON</a>.</p>",
 					"url" : "#",
 					"sampleId" : "layers_point_clustering"
 				}, {
 					"title" : "SVG and CSS to style polygons",
-					"description" : "Description",
+					"description" : "<p>Style polygon features using CSS. County polygons are shaded according to the total foreign born population. A CSS animation is used to gradually change county boundaries as the mouse cursor moves across the map. Not supported in browsers that do not support SVG. </p>",
 					"url" : "#",
 					"sampleId" : "styling_svg_fb"
 				}, {
 					"title" : "SVG and CSS using D3",
-					"description" : "Description",
+					"description" : "<p>This sample uses the D3 toolkit to define data classification and apply a style to each range of values. </p>",
 					"url" : "#",
 					"sampleId" : "styling_svg_quantize"
 				}, {
 					"title" : "SVG path to create a SimpleMarkerSymbol",
-					"description" : "Description",
+					"description" : "<p>This sample shows the use of the setPath() method of the SimpleMarkerSymbol class. Using this method you can create a customized marker icon from any SVG path. You may also use the setColor() method to customize its filled color. For more customized SVG icons and their paths, refer to <a href='http://raphaeljs.com/icons/' target='_blank'>http://raphaeljs.com/icons/</a>.</p>",
 					"url" : "#",
 					"sampleId" : "graphics_svg_path"
 				}
@@ -269,17 +269,17 @@
 					"sampleId" : "exp_rasterlayer"
 				}, {
 					"title" : "Cross Origin Resource Sharing(CORS) - buffer",
-					"description" : "Description",
+					"description" : "<p>This sample is experimental and may not work on all browsers. Visit <a href='http://caniuse.com/' target='_blank'>caniuse.com</a> to determine if the CORS capabilities used in this sample are available for your browser.<p></p>Cross-Origin Resource Sharing (CORS) allows web applications to bypass a browser's <a href='http://en.wikipedia.org/wiki/Same_origin_policy' target='_blank'>same origin policy</a>. When both the web server and browser support CORS, a <a href='https://developers.arcgis.com/javascript/jshelp/ags_proxy.html' target='_blank'>proxy</a> is not required to do cross-domain requests. This both simplifies application development and potentially provides a performance boost. Development is simplified because it is no longer necessary to maintain a proxy page on your server. The performance boost comes from accessing a resource directly rather than sending a request back to your server, which then requests the specified URL and returns the result.<p></p>To use CORS from an ArcGIS API for JavaScript application, add the root URL for CORS enabled servers to <code>esri.config.defaults.io.corsEnabledServers</code>, which is an array of strings. As stated previously, web servers must be pre-configured to support CORS. This is a straightforward, simple process and <a href='http://enable-cors.org/' target='_blank'>enable-cors.org</a> has walkthroughs on how to enable CORS for popular web servers.<p></p>This sample shows simplify and buffer operations for a large polygon running without a proxy when running in browsers that support CORS. If a browser does not support CORS, this sample falls back to using a proxy.</p>",
 					"url" : "#",
 					"sampleId" : "exp_cors_buffer"
 				}, {
 					"title" : "Drag and drop to display data",
-					"description" : "Description",
+					"description" : "<p>This sample is experimental and may not work on all browsers. Visit <a href='http://caniuse.com/' target='_blank'>caniuse.com</a> to determine if the drag/drop and file access capabilities used in this sample are available for your browser.<p></p>The sample uses several HTML5 technologies to access files from disk, read them then drag and drop them onto the map control for display. To test the sample drag an image or a csv file with latitude/longitude fields from windows explorer to the map. Note that images are rendered on the map as picture marker symbols and csv files with valid latitude/longitude fields are displayed as a graphics layer. You can also drag/drop map and feature services onto the map for display.<p></p>The map is set up as a drop zone and executes the <code>handleDrop</code> function when a file is dropped on the map. The <code>handleDrop</code> function determines which type of file was dropped then processes the drop input for display on the map.<p></p>At version 2.7, this sample was updated to provide a file upload option to support older browsers that are do not have support for drag/drop and file access capabilities. To test this, open the application in a Internet Explorer and note that a browse button appears that allows users to browse for a csv file. This type of approach is useful when you want to build an application that uses HTML5 capabilities that are not available on all browsers. To add this capability to your application create a form with a file input. Note that the input in this sample has a name of data, this value will change depending on the service. The documentation for the service to which you are uploading the file should specify this value.<p></p>A .NET handler is used to return the uploaded csv file in base64 format. Download the zip file to view the handler code.</p>",
 					"url" : "#",
 					"sampleId" : "exp_dragdrop"
 				}, {
 					"title" : "History API to track selected feature",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates how to select features using a value retrieved from the url. In this case, parcels are selected using the parcel id, which is provided to the application using the parcelid url parameters. The API provides a helper method <code>esri.urlToObject</code> that simplifies the process of extracting url parameters. When users click on parcels in the map we update the url to contain the new parcelid using the history object. The history object is part of HTML5 and may not be supported by all browsers. Visit <a href='http://caniuse.com/' target='_blank'>canisue.com</a> to determine if your browser supports this capability. In browsers that do support this capability users will be able to navigate through the selected parcels using the browser's back/forward buttons. To test the history object select a few parcels then use the browser's navigation buttons to move through the selection history. View the <a href='https://developer.mozilla.org/en/DOM/Manipulating_the_browser_history' target='_blank'>Manipulating the browser history</a> documentation on the Mozilla Developer Network for more information.</p>",
 					"url" : "#",
 					"sampleId" : "exp_history"
 				}
@@ -384,32 +384,32 @@
 			"categoryId" : "section_mobile",
 			"samples" : [{
 					"title" : "Attribute editing - mobile",
-					"description" : "Description",
+					"description" : "<p>This sample uses <a href='http://jquerymobile.com/' target='_blank'>jQueryMobile</a> to build an editing application for mobile devices. jQueryMobile is a framework that simplifies the process of building an application that will work well on smartphones like Android, iPhone and Blackberry Torch.</p></p>The sample allows end-users to add a new citizen request at the specified location. To test the sample, click the Add button then specify the request type. Next, you'll click on the map to specify the issue location then add details about the incident such as comments and contact information.</p></p>Clicking on an existing request, displays an info window with formatted content. The date is formatted using the out-of-the-box date formatter introduced at version 2.2. The phone number is formatted using a custom formatter that returns the phone number in a format that allows you to click the link to call the number from an iPhone.</p>",
 					"url" : "#",
 					"sampleId" : "mobile_citizenrequest"
 				}, {
 					"title" : "Compass",
-					"description" : "Description",
+					"description" : "<p>This sample uses the device's orientation and CSS3 to build a basic compass.</p><p>Instances of the <code>DeviceOrientationEvent</code> class are fired while the device is changing the orientation. The <code>DeviceOrientationEvent</code> class encapsulates the angles of rotation (alpha, beta, and gamma) in degrees and heading. The angles of rotation do not represent the real world orientation. However, the <code>webkitCompassHeading</code> property can be used to track real-world changes. You can track changes in the direction the device is pointing by tracking the difference between the device's new heading and the previous heading.</p><p>The <code>webkitCompassHeadingAccuracy</code> is used to indicate the accuracy of the compass data in degrees. For instance, if the value is 10, the heading is plus or minus 10. In this sample, a jewel is placed in the center of the compass face to indicate the accuracy of the current compass readings. As the compass reading becomes less accurate the jewel changes from green to red.</p>",
 					"url" : "#",
 					"sampleId" : "mobile_compass"
 				}, {
 					"title" : "Mobile ArcGIS.com",
-					"description" : "Description",
+					"description" : "<p>This sample uses <a href='http://jquerymobile.com/' target='_blank'>jQueryMobile</a> to build an application for mobile devices that displays <a href='http://www.arcgis.com' target='_blank'>ArcGIS.com</a> web maps. jQueryMobile is a framework that simplifies the process of building an application that will work well on smart-phones like Android, iPhone and Blackberry Torch.</p><p>You can modify the application to use another webmap by appending a valid web map id to the sample url.</p><p><code>?webmap=1966ef409a344d089b001df85332608f</code></p><p>At version 2.4 a new mobile popup was added that is designed to work well when used with smaller map sizes. The mobile popup displays the title when the feature is clicked along with an arrow that lets users navigate to a new panel to view the item details.</p><p>This sample specifies a manifest file, this is a file with a list of resources that will be cached locally. Click <a href='https://developers.arcgis.com/javascript/samples/mobile_arcgis/arcgis.manifest' target='_blank'>here</a> to view the manifest file used by this application. For more details about working with manifest files see the <a href='http://www.w3.org/TR/html5/browsers.html#offline'>W3C working draft</a>.</p><p><code>&lt;html manifest='mobile.manifest'&gt;</code></p>",
 					"url" : "#",
 					"sampleId" : "mobile_arcgis"
 				}, {
 					"title" : "Shake gesture recognition",
-					"description" : "Description",
+					"description" : "<p>This sample uses gesture recognition to remove a Dynamic Map Service and reset the application to its initial default launch state. A device's accelerometer can be used to detect motion events in the x, y and z direction. An instance of theDeviceMotionEvent class is used to listen for devicemotion events. The DeviceMotionEvent can be used to determine when a significant change in the device's motion occurs. The devicemotion event type captures the rotation rate, acceleration of the device and the time interval since the last device motion event.</p><p>The acceleration data (user acceleration and gravity) for the x, y and z axis is stored and compared to previous devicemotion events every 150 milliseconds. If the change in acceleration data is greater than the user-defined setting, the application is reset to its default state.</p>",
 					"url" : "#",
 					"sampleId" : "mobile_shake"
 				}, {
 					"title" : "Soil details - mobile",
-					"description" : "Description",
+					"description" : "<p>This sample uses <a href='http://jquerymobile.com/' target='_blank'>jQueryMobile</a> to build an application for mobile devices that displays soil details. jQueryMobile is a framework that simplifies the process of building an application that will work well on smart-phones like Android, iPhone and Blackberry Torch.</p><p>When the application loads, the HTML5 <a href='http://dev.w3.org/geo/api/spec-source.html' target='_blank'>Geolocation API</a> is used to determine the current device location. To determine the current device location use the <code>navigator.geolocation.getCurrentPosition</code> method.</p><p><pre>if (navigator.geolocation) {<br/>  navigator.geolocation.getCurrentPosition(initMap, locationError);<br/>}</pre></p><p>When the current location is found,the callback function (initMap) runs which zooms to the current location and displays the soils layer. The callback function has a parameter that provides access to the current coordinates (latitude, longitude) and additional information such as accuracy, heading, speed and the current time-stamp.</p><p>This sample specifies a manifest file, this is a file with a list of resources that will be cached locally. When the web application runs it downloads the resources specified in the manifest and caches them locally. To use a manifest file add the manifest attribute to the <code>&lt;head&gt;</code> element. The browser doesn't need to go back to the server for resources defined in the manifest file unless the manifest file changes.</p><p>For more details about working with manifest files see the Mozilla Developer Network <a href='https://developer.mozilla.org/en-US/docs/Apps/Manifest' target='_blank'>documentation</a>.</p><p><code>&lt;html manifest='mobile.manifest'&gt;</code></p>",
 					"url" : "#",
 					"sampleId" : "mobile_soilmap"
 				}, {
 					"title" : "Tilt gesture",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates how to take advantage a mobile device's built-in gyroscope to adjust a layer's opacity. There are a variety of touch events that can be used to track touch interactions. A touch event is triggered when a user's finger touches the device screen. This sample application listens for touch events in the upper right corner of the device's screen. Touch and hold the target area and while rotating the device around its x-axis, the layer's opacity is updated as the device's angle of rotation. Although the x angle of rotation extends 180 to -180 , this sample only uses an angle of rotation from 0 to 90 (0 making the layer completely transparent.)</p><p>Unlike the accelerometer, which measures the device's acceleration, the gyroscope provides precise information about the device's orientation in all three dimensions (i.e. x, y and z). The physical orientation and motion of the device can be determined by using the <code>deviceorientation</code> event. Whenever a change in device orientation occurs the <code>deviceorientation</code> event is fired. Properties of the event are alpha (z-axis), beta (x-axis) and gamma (y-axis) and specify the orientation of the device. More details about the DeviceOrientation Event Specification can be found <a href='http://dev.w3.org/geo/api/spec-source-orientation.html' target='_blank'>here</a>.</p>",
 					"url" : "#",
 					"sampleId" : "mobile_tilt"
 				}
@@ -419,37 +419,37 @@
 			"categoryId" : "section_popups",
 			"samples" : [{
 					"title" : "Custom info window",
-					"description" : "Description",
+					"description" : "<p>This sample shows how to use the <a href='https://developers.arcgis.com/javascript/jsapi/infowindowbase-amd.html' target='_blank'>InfoWindowBase</a> class to create a custom info window. This class was introduced at version 2.2 of the ArcGIS API for JavaScript and provides the ability to extend the info window to customize the behavior and appearance of an info window.</p><p>In this example, the content of the info window expands when you click the down arrow and the info window is hidden when the map is panned. To build a custom info window with this functionality, extend the InfoWindowBase class and add a new button to the title bar. When the user clicks the down button, the content portion of the info window is displayed using an animated effect defined using the <a href='http://dojotoolkit.org/reference-guide/1.7/dojo/fx/Toggler.html' target='_blank'>dojo.fx.Toggler</a> class.</p><p>After creating the custom info window, you can associate it with the map using the new infoWindow option.</p>",
 					"url" : "#",
 					"sampleId" : "widget_extendInfowindow"
 				}, {
 					"title" : "Format info window content",
-					"description" : "Description",
+					"description" : "<p>This sample shows how to format the content of an info window using formatting functions added at version 2.2 of the ArcGIS API for JavaScript. You can format the info template content using one of the out-of-the box formatters or for more advanced options you can define a custom formatting function.</p>",
 					"url" : "#",
 					"sampleId" : "widget_formatInfoWindow"
 				}, {
 					"title" : "Geoprocessing tool link in popup",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates how to run a geoprocessing tool from a popup window. The popup class extends the default info window to provide additional capabilities including the ability to associate feature(s) with an info window. In this sample, a link is added to each popup window that use the <a href='http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Demographics/ESRI_Population_World/GPServer/PopulationSummary' target='_blank'>Population</a> geoprocessing service to calculate the population summary for the selected feature.</p><p>To run the geoprocessing task, a new link is added to the bottom of the popup in the 'actions list' section next to the zoom link. After creating the link, a function is registered that will run each time someone clicks on the link. The function, calculatePopulation, sets up and runs the geoprocessing task using the selected feature.</p>",
 					"url" : "#",
 					"sampleId" : "gp_popuplink"
 				}, {
 					"title" : "Info Window Lite",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates how to use the InfoWindowLite to display popup content. The 'lite' info window is a simple, easy to customize window. By default content is displayed in the esri.dijit.Popup. In order to use the InfoWindowLite instead you'll need to create the lite info window and assign it to be the map's info window using the setInfoWindow method.</p>",
 					"url" : "#",
 					"sampleId" : "widget_infowindow"
 				}, {
 					"title" : "Mobile popup",
-					"description" : "Description",
+					"description" : "<p>The mobile popup window, added at version 2.4, is designed to display well when the map is viewed on mobile devices and other small screens. When features are clicked only the title and navigation information is displayed. Users can then choose to view additional information about that feature in a new panel.</p><p>This sample demonstrates how to add a web map from <a href='http://www.arcgis.com' target='_blank'>ArcGIS.com</a> to the application and enable mobile popups. The first step is to create the new mobile popup. The second step is toassociate it with the map's infoWindow.</p>",
 					"url" : "#",
 					"sampleId" : "widget_mobilepopup"
 				}, {
 					"title" : "Popup",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates how to display layer details on click using the Popup window. The contents of the window are defined using PopupTemplate. The PopupTemplate allows you to quickly specify content that includes field info, text description, images and charts. The sample also demonstrates how to modify the default appearance of the popup using css.</p>",
 					"url" : "#",
 					"sampleId" : "popup_chart"
 				}, {
 					"title" : "Popup content in side panel",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates how to display popup content outside of a popup or info window. At version 3.3 of the ArcGIS API for JavaScript you can define a Popup and specify that you do not want the popup to display when a user selects a feature on the map but the events associated with the popup will still occur. This means that you can listen to events like the Popup's 'onSelectionChange' event and retrieve the popup content for display.</p>",
 					"url" : "#",
 					"sampleId" : "popup_sidepanel"
 				}
@@ -459,22 +459,32 @@
 			"categoryId" : "section_portal",
 			"samples" : [{
 					"title" : "Add shapefile",
-					"description" : "Description",
+					"description" : "<p>The ArcGIS Portal API is a REST API that allows developers to work with content from ArcGIS Online. Portions of this API were integrated into the ArcGIS API for JavaScript at version 2.8. If you need access to capability not exposed via the classes in the ArcGIS API for JavaScript you can use <code>esri/request</code> to work directly with the ArcGIS Portal REST API.</p><p>This sample demonstrates how to use the <a href='http://www.arcgis.com/apidocs/rest/generate.html' target='_blank'>Generate</a> operation to generate a feature collection from an input shapefile. The application contains a form with an input element of type file that allows users to navigate to a zipped shapefile. This snippet calls the generate operation, note that the form used to capture the input shapefile is specified using the form parameter.</p><p>When the generate operation successfully completes the <code>addShapefileToMap</code> function is executed that adds the feature collection to the map.</p><p><b>Note:</b> There are some limitations to be aware of when adding shapefiles to the map. View the<a href='http://resources.arcgis.com/en/help/arcgisonline/index.html#//010q000000m2000000' target='_blank'>About shapefiles</a> help topic in ArcGIS.com documentation for details.</p>",
 					"url" : "#",
 					"sampleId" : "portal_addshapefile"
 				}, {
 					"title" : "Find group ID",
-					"description" : "Description",
+					"description" : "<p>This sample uses the ArcGIS Portal API to find groups associated with an input search term. The sample is a duplicate of the Find group ID sample but was updated to use Asynchronous Module Definition (AMD) to load and access modules. Read the following Dojo documentation for details on the upgrade process:</p><p><a href='http://dojotoolkit.org/reference-guide/1.8/releasenotes/migration-2.0.html' target='_blank'>Dojo 1.x to 2.0 migration guide</a></p><p><a href='http://dojotoolkit.org/documentation/tutorials/1.8/modern_dojo/' target='_blank'>Modern Dojo </a></p><p>When signed in all groups (public and private) that the logged in user has access to will be displayed. The results of the group query are displayed in dojo's <a href='http://dojofoundation.org/packages/dgrid/' target='_blank'>dgrid</a> - a new grid component that is lightweight and modular. In this sample a new dgrid is created and the input columns and row renderer are specified.</p><p>The row renderer can be used to easily present data in different views. In our example we format the input data to display a thumbnail image and the group data in a format that doesn't look like a typical grid. A typical use of the row renderer might be to display data in different views using the same grid. Take a look at the <a href='http://dojofoundation.org/packages/dgrid/demos/multiview/' target='_blank'>dgrid multiviewer demo</a> to see a working example.</p>",
 					"url" : "#",
 					"sampleId" : "portal_getgroupamd"
 				}
 			]
 		}, {
 			"category" : "Printing",
-			"categoryId" : "section_dynamiclayers",
+			"categoryId" : "section_printing",
 			"samples" : [{
+					"title" : "Print",
+					"description" : "<p>This sample shows how to create a print-friendly version of an ArcGIS API for JavaScript map. Note that this functionality requires an ArcGIS Server 10.1 instance.</p><p>The print widget is used in this sample. For more granular control over output from the ArcGIS Server 10.1 print service, use the printTask.</p>",
+					"url" : "#",
+					"sampleId" : "widget_print"
+				},{
+					"title" : "Print templates with esri.request",
+					"description" : "<p>The Print Dijit can be created with various print templates to specify different types of output from ArcGIS Server's Export Web Map Task. In this sample, print templates are created using info retireved from the Export Web Map Task via esri.request. Note that this functionality requires an ArcGIS Server 10.1 instance.</p><p>The print widget is used in this sample. For more granular control over output from the ArcGIS Server 10.1 print service, use the printTask.</p>",
+					"url" : "#",
+					"sampleId" : "widget_print_esri_request"
+				},{
 					"title" : "Print webmap",
-					"description" : "Description",
+					"description" : "<p>Use the Print Dijit to print a webmap from ArcGIS.com. Two print templates are created to show some of the print options offered by the print dijit. Note that this functionality requires an ArcGIS Server 10.1 instance.</p><p>The print widget is used in this sample. For more granular control over output from the ArcGIS Server 10.1 print service, use the printTask.</p>",
 					"url" : "#",
 					"sampleId" : "widget_print_webmap"
 				}
@@ -484,27 +494,27 @@
 			"categoryId" : "section_query",
 			"samples" : [{
 					"title" : "Feature layer hover",
-					"description" : "Description",
+					"description" : "<p>This sample applies a definition expression to a feature layer to display a subset of the layer's graphics on the map. A <a href='https://developers.arcgis.com/javascript/jsapi/featurelayer-amd.html'>FeatureLayer</a> is a new layer type at 10 that inherit from the graphics layer and supports querying, selections,layer definitions and editing.</p><p>The feature layer constructor takes a url to an individual layer in a feature service and defines the mode and output fields. The mode determines how the features are returned to the client. In this case the application uses <a href='https://developers.arcgis.com/javascript/jsapi/featurelayer-amd.html#setDefintionExpression'>setDefinitionExpression</a> to limit the results to a small set of features so mode is set to snapshot mode which returns all features to the client.</p><p>Because the feature layer inherits from graphics layers you can take advantage of graphics layer mouse events. This code listens for onMouseOver to display an InfoWindow when the mouse hovers over a graphic.</p>",
 					"url" : "#",
 					"sampleId" : "fl_hover"
 				}, {
 					"title" : "Manage results from multiple queries",
-					"description" : "Description",
+					"description" : "<p>A query task is the ideal choice for getting a small number of features from a single layer in a map service. Occasionally, it is necessary to query multiple layers simultaneously. If the requirement is to query all layers in a map service, then an identify task should be used. Otherwise, it can be useful to use multiple query tasks to query different layers. The potential hangup with this approach is how to know when all queries have finished. The answer is to use a <a href='http://dojotoolkit.org/reference-guide/1.8/dojo/promise/all.html#dojo-promise-all' target='_blank'>dojo/promise/all</a>. Using an instance of dojo/promise/all is an easy way to be notified when multiple promises or deferreds finish. dojo/promise/all is created by passing an array of promises or deferred. This is trivial when using queryTasks since the return value of a queryTask is a deferred. Once all the deferreds are resolved, the results are passed to a callback. Inside the callback, all results can be processed.</p><p>The code in the sample shows an exmaple of how this would work: initially, two queries and two query task objects are created. When the map is clicked, both query tasks are executed and an instance of dojo/promise/all is created using them. When both queries finish, all results are passed to the callback and the features returned are added to the map.</p>",
 					"url" : "#",
 					"sampleId" : "query_deferred_list"
 				}, {
 					"title" : "Query data without a map",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates that you can query data from a map service without displaying the service. Most map services contain datasets with attribute information that can be queried and displayed in a simple list or table. This sample queries USA Census data for a state name that you supply, then displays a list of attribute information about the state.</p><p>The code creates a <a href='https://developers.arcgis.com/javascript/jsapi/querytask-amd.html' target='_blank'>QueryTask</a> along with a <a href='https://developers.arcgis.com/javascript/jsapi/query-amd.html' target='_blank'>Query</a> that is used as input to the task. Notice that the constructor for the QueryTask requires the URL of a layer in a map service (<a href='http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Demographics/ESRI_Census_USA/MapServer/5' target='_blank'>http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Demographics/ESRI_Census_USA/MapServer/5</a>). The number 5 at the end of the URL is the index of the states layer in the map table of contents. To find out the URL to your own map service and its layer indexes, use the <a href='https://developers.arcgis.com/javascript/jshelp/ags_rest.html'>Services Directory</a>.</p><p>Notice that the query.returnGeometry is set to false because the results won't be displayed on a map. The outFields determine which fields in the states layer will be queried.</p><p>When you click the Get Details button, the <b>execute</b> function is called. The query task searches for the text in the primary display field of the layer to be queried, which for this layer is the STATE_NAME field. This is why query.text is set to the state name that you entered in the text box. If you want to enter any SQL where clause, you can use query.where instead of query.text.</p><p>With all the properties of the query specified, it can be passed as an argument to the QueryTask, along with a function to be called when the query is complete.</p><p><pre>queryTask.execute(query,showResults);</pre></p><p>The query results are passed to the <b>showResults</b> function as a FeatureSet. The function loops through all the results' attributes and constructs a list from them using HTML. This HTML is then written to the <code>info</code> div.</p>",
 					"url" : "#",
 					"sampleId" : "query_nomap"
 				}, {
 					"title" : "Query with Feature Layer",
-					"description" : "Description",
+					"description" : "<p>Page through records in a table. The queryIds method is used to query the feature layer and return the object ids for all the records that match the input query. There isn't a limit on the number of object ids that can be returned.</p><p>Once all the object ids are returned, a new query is performed to fetch attribute information for the specified set of object ids.</p>",
 					"url" : "#",
 					"sampleId" : "fl_paging"
 				}, {
 					"title" : "Select with Feature Layer",
-					"description" : "Description",
+					"description" : "<p>Click the map to generate a buffer of one mile around the point clicked. The circle is generated client side and is then used to query points that represent census blocks in the buffered area. Click on a point to see more information about the census block.</p>",
 					"url" : "#",
 					"sampleId" : "query_buffer"
 				}
@@ -514,57 +524,57 @@
 			"categoryId" : "section_renderers",
 			"samples" : [{
 					"title" : "Class breaks renderer",
-					"description" : "Description",
+					"description" : "<p>This sample uses a class breaks renderer to symbolize Kansas counties by population density. The code explicitly adds classes and defines a color for each. The classes are defined using the <a href='https://developers.arcgis.com/javascript/jsapi/classbreaksrenderer-amd.html#addbreak'>ClassBreaksRenderer.addBreak()</a> method, where the parameters are the minimum and maximum values to be included in the class and the symbol to use for the class.</p><p>Notice the use of 'Infinity' to denote that the final break does not have a ceiling.</p>",
 					"url" : "#",
 					"sampleId" : "renderer_class_breaks"
 				}, {
 					"title" : "Color ramp symbols",
-					"description" : "Description",
+					"description" : "<p>Renderer.setColorInfo() allows you to render quantitative data with color ramp (continuous color) without breaks. (Added at version 3.8 of the JS API) </p>",
 					"url" : "#",
 					"sampleId" : "renderer_color_ramp"
 				}, {
 					"title" : "Color ramp with rotation and proportional symbols",
-					"description" : "Description",
+					"description" : "<p>Show temperature, wind speed and wind direction using a single renderer. Color is used for temperature, symbol rotation for direction and symbol size for wind speed.</p>",
 					"url" : "#",
 					"sampleId" : "renderer_class_breaks_proportional_rotation"
 				}, {
 					"title" : "Dot density renderer",
-					"description" : "Description",
+					"description" : "<p>Create a dot density map using to show corn production in the US.</p>",
 					"url" : "#",
 					"sampleId" : "renderer_dot_density"
 				}, {
 					"title" : "Generate renderer",
-					"description" : "Description",
+					"description" : "<p>This sample uses ArcGIS Server to generate a Natural Breaks renderer with five classes. Note that this functionality requires an ArcGIS Server 10.1 instance.</p><p>The generate renderer task can also generate unique value renderers and can also generate color ramp(s) from two or more colors.</p>",
 					"url" : "#",
 					"sampleId" : "renderer_generate_renderer"
 				}, {
 					"title" : "Proportional symbols for lines",
-					"description" : "Description",
+					"description" : "<p>Version 3.7 of the API introduced proportionalSymbolInfo which allows features to be rendered using proportional symbols. The symbols used in this example are not true proportional symbols but line symbol widths do correspond to traffic volume.</p>",
 					"url" : "#",
 					"sampleId" : "renderer_proportional_lines"
 				}, {
 					"title" : "Proportional symbols for points",
-					"description" : "Description",
+					"description" : "<p>Version 3.7 of the API introduced proportionalSymbolInfo which allows features to be rendered using proportional symbols.</p>",
 					"url" : "#",
 					"sampleId" : "renderer_proportional_points"
 				}, {
 					"title" : "Renderer using a function",
-					"description" : "Description",
+					"description" : "<p>With version 3.3 of the API, a renderer can accept a function instead of an attribute field name and that function will be run to calculate the value that should be used to renderer each feature.</p>",
 					"url" : "#",
 					"sampleId" : "renderer_function"
 				}, {
 					"title" : "Scale dependent renderer",
-					"description" : "Description",
+					"description" : "<p>Scale dependent renderer with proportional symbols showing percent of land used for farming. </p>",
 					"url" : "#",
 					"sampleId" : "renderer_proportional_scale_dependent"
 				}, {
 					"title" : "Temporal renderer",
-					"description" : "Description",
+					"description" : "<p>This sample shows how you can configure a temporal renderer to perform time-based rendering of features in a feature layer. This type of renderer is useful to visualize historic or real-time data, in this case earthquakes.</p><p>The temporal renderer allows you to define how observations and tracks are rendered. In this sample, an observation renderer is defined using a class breaks renderer. The class breaks renderer is used to define symbols by magnitude, the larger the magnitude the larger the symbol.</p><p>Next a symbol ager is defined, the ager determines how the feature's symbol changes as time progresses. The color for each symbol is modified as time progresses.</p>",
 					"url" : "#",
 					"sampleId" : "renderer_temporal"
 				}, {
 					"title" : "Unique value renderer",
-					"description" : "Description",
+					"description" : "<p>This sample uses a unique value renderer to symbolize the United States. Each state has a string attribute 'SUB_REGION' indicating its region of the country. The <a href='https://developers.arcgis.com/javascript/jsapi/uniquevaluerenderer-amd.html#addvalue'>UniqueValueRenderer.addValue()</a> method is used repeatedly to define a color for each region.</p>",
 					"url" : "#",
 					"sampleId" : "renderer_unique_value"
 				}
@@ -574,17 +584,17 @@
 			"categoryId" : "section_secured",
 			"samples" : [{
 					"title" : "Identity Manager with info persisted client side",
-					"description" : "Description",
+					"description" : "<p>With version 2.8 of the ArcGIS API for JavaScript, two new IdentityManager methods were introduced: initialize and toJson. These methods can be used to serialize and de-serialize the IdentityManager to and from JSON. This sample provides a working example of how this can be done. When available, IdentityManager info is stored in local storage. If local storage is not available, a cookie is used. It is important to note that no passwords are stored. The info stored client side includes server information and token(s) to access secure services.</p><p><b>Note:</b> The IdentityManager works with resources from ArcGIS.com and services published using ArcGIS Server 10.0 SP1 or greater.</p>",
 					"url" : "#",
 					"sampleId" : "widget_identitymanager_client_side"
 				}, {
 					"title" : "OAuth Basic",
-					"description" : "Description",
+					"description" : "<p>This sample uses OAuth 2.0 to allow users to log in to the ArcGIS platform via the app. More detailed information about user logins and OAuth 2.0 can be found <a href='http://developers.arcgis.com/en/authentication/user-logins.html' target='_blank'>here</a>.</p><p>This sample shows you how to use 'inline' web flow, as opposed to using a Popup window that presents an login user interface. With inline web flow there is no popup window involved.</p><p>User Login is performed in a single step that requires the App to direct the browser to the authorization URL for the portal (shown below for arcgis.com) :</p><pre>https://www.arcgis.com/sharing/oauth2/authorize?<br/>client_id=APPID&<br/>response_type=token&<br/>redirect_uri=&lt;redirect_uri&gt;</pre><p>If the end user successfully presents credentials (eg username and password) to the platform (eg. arcgis.com) the server returns an access token by redirecting the browser to the specified <code>redirect_uri</code>. The access token is returned as part of the url fragment appended to the <code>redirect_uri</code>.</p><p>For example the server may redirect the browser to the following url :</p><p><pre>http://app.example.com/cb#access_token=2YotnFZFEjr1zCsicMWpAA&expires_in=3600</pre></p><p>To run this sample on your own web server you need to register your application on ArcGIS.com. Once the application is registered you will get an appid that you use in the sample.  More detailed step-by-step information can be found <a href='http://resources.arcgis.com/en/help/arcgisonline/index.html#//010q00000076000000#ESRI_SECTION1_55703F1EE9C845C3B07BBD85221FB074' target='_blank'>here</a> on how to add and register your app(s). Note: When running the sample in IE9 be sure to use a fully qualified domain name, for example: http://myhost.example.com instead of http://myhost.</p>",
 					"url" : "#",
 					"sampleId" : "portal_oauth_inline"
 				}, {
 					"title" : "OAuth Popup",
-					"description" : "Description",
+					"description" : "<p>This sample uses OAuth 2.0 to allow users to log in to the ArcGIS platform via the app. More detailed information about user logins and OAuth 2.0 can be found <a href='http://developers.arcgis.com/en/authentication/user-logins.html' target='_blank'>here</a>.</p><p>The popup web flow is similar to the 'inline' flow, however, the sign in page is within a popup window.</p><p>User Login is performed in a single step that requires the App to direct the browser to the authorization URL for the portal (shown below for arcgis.com) :</p><pre>https://www.arcgis.com/sharing/oauth2/authorize?<br/>client_id=APPID&<br/>response_type=token&<br/>redirect_uri=&lt;redirect_uri&gt;</pre><p>If the end user successfully presents credentials (eg username and password) to the platform (eg. arcgis.com) the server returns an access token by redirecting the browser to the specified <code>redirect_uri</code>. The access token is returned as part of the url fragment appended to the <code>redirect_uri</code>.</p><p>For example the server may redirect the browser to the following url :</p><p><pre>http://app.example.com/cb#access_token=2YotnFZFEjr1zCsicMWpAA&expires_in=3600</pre></p><p>To run this sample on your own web server you need to register your application on ArcGIS.com. Once the application is registered you will get an appid that you use in the sample.  More detailed step-by-step information can be found <a href='http://resources.arcgis.com/en/help/arcgisonline/index.html#//010q00000076000000#ESRI_SECTION1_55703F1EE9C845C3B07BBD85221FB074' target='_blank'>here</a> on how to add and register your app(s). Note: When running the sample in IE9 be sure to use a fully qualified domain name, for example: http://myhost.example.com instead of http://myhost.</p>",
 					"url" : "#",
 					"sampleId" : "portal_oauth_popup"
 				}
@@ -594,17 +604,17 @@
 			"categoryId" : "section_tiledlayers",
 			"samples" : [{
 					"title" : "Tiled map service",
-					"description" : "Description",
+					"description" : "<p>Example of using an ArcGIS Server tiled map service.</p>",
 					"url" : "#",
 					"sampleId" : "layers_ags_tiled"
 				}, {
 					"title" : "Web tiled",
-					"description" : "Description",
+					"description" : "<p>Use Open Cycle Map in an ArcGIS API for JavaScript application using the esri.layers.WebTiledLayer class.</p>",
 					"url" : "#",
 					"sampleId" : "layers_webtiled_one"
 				}, {
 					"title" : "WMTS - resource info",
-					"description" : "Description",
+					"description" : "<p>At version 2.4 of the ArcGIS API for JavaScript a new class <code>esri.layers.WMTSLayer</code> was added to the API. The WMTSLayer class is used to add a new OGC Web Map Tile Service layer to the map. The default behavior of a WMTSLayer is to execute a WMTS GetCapabilities request, which requires using a proxy page. This sample demonstrates how to specify the resource info so no proxy page is required.</p>",
 					"url" : "#",
 					"sampleId" : "layers_wmtslayerresourceinfo"
 				}
@@ -614,12 +624,12 @@
 			"categoryId" : "section_time",
 			"samples" : [{
 					"title" : "Histogram Time Slider",
-					"description" : "Description",
+					"description" : "<p>The histogram time slider widget provides a simple way to visualize temporal data and filter based on date. The data used in this sample is a feature service with points showing concerts played by U2 in the United States from 1980 - 2011. </p>",
 					"url" : "#",
 					"sampleId" : "widget_histogram_time_slider"
 				}, {
 					"title" : "Time slider with dynamic map service layer",
-					"description" : "Description",
+					"description" : "<p>This sample shows how to configure the TimeSlider to filter petroleum well data by date. The TimeSlider is configured to have two thumbs so only data occurring between the two thumb locations is displayed. The setThumbIndexes method determines the initial location of each thumb. In this case a thumb is added at the initial start time and another thumb is positioned one time step up.</p><p><code>timeSlider.setThumbCount(2);timeSlider.setThumbIndexes([0,1]);</code></p><p>There are several ways to define the number of time stops (ticks) displayed on the time slider:</p><ul><li><b>setTimeStops</b> - Manually define the stop locations by providing an array of dates.</li><li><b>createTimeStopsByCount</b> - The specififed number of stops are created between the start and end time.</li><li><b>createTimeStopsByInterval</b> - A time stop is created for each specified interval, i.e. (week, month, day).</li></ul><p>This sample creates a time stop on the slider for every two years between the layer's start time and end time.</p><p><code>timeSlider.createTimeStopsByTimeInterval(results[1].layer.timeInfo.timeExtent,2,'esriTimeUnitsYears');</code></p>",
 					"url" : "#",
 					"sampleId" : "time_sliderwithdynamiclayer"
 				}
@@ -629,77 +639,77 @@
 			"categoryId" : "section_vector",
 			"samples" : [{
 					"title" : "Any projection",
-					"description" : "Description",
+					"description" : "<p>At version 3.3, the API supports using only vector layers in the map (no basemap required). This means that features from a feature service can be displayed in any projection. To use a projection other than a service's default, define esri.Map's spatial reference by specifying the extent constructor option. The spatial reference of the extent will be used as the map's spatial reference. When requests are made for features from a service, the map's spatial reference will be included which tells the service to re-project features before sending them to the client. Use this sample to explore various projections and to create extents for use in your own applications.</p>",
 					"url" : "#",
 					"sampleId" : "fl_any_projection"
 				}, {
 					"title" : "CSV",
-					"description" : "Description",
+					"description" : "<p>The CSVLayer module provides an easy way to map point data from a CSV file. </p>",
 					"url" : "#",
 					"sampleId" : "layers_csv"
 				}, {
 					"title" : "dgrid",
-					"description" : "Description",
+					"description" : "<p>The <a href='http://dgrid.io/' target='_blank'>dgrid</a> was introduced with the 1.7 release of Dojo and is a simplified, improved replacement for the older dojox data grid. The dgrid is not normally included with Dojo. The usual workflow is to download dgrid from the <a href='https://github.com/SitePen/dgrid' target='_blank'>GitHub</a> and host it yourself. To ease use of the dgrid, Esri packages it with the ArcGIS API for JavaScript to make things easier for developers. Instead of having to download and host the dgrid modules yourself, you can simply require() them after you've included the ArcGIS API for JavaScript in your page.</p><p>This sample connects a dgrid to a Feature Layer. When a cell containing a feature ID is clicked, the corresponding feature is highlighted on the map.</p>",
 					"url" : "#",
 					"sampleId" : "fl_dgrid"
 				}, {
 					"title" : "Feature collection",
-					"description" : "Description",
+					"description" : "<p>This sample shows how to create a feature layer based on a feature collection. A feature collection consists of a layer definition and feature set. This sample creates a new feature layer to display the location of geo-enabled photos from <a href='http://www.flickr.com' target='_blank'>Flickr</a>. The geo-enabled information comes from Flickr's public feed.</p><p>In this sample a new feature collection that will contain point features is created. After creating the feature collection a layer definition is applied that specifies the default renderer and fields for the feature collection. A picture marker symbol is defined as the default renderer. After creating the feature collection, it is passed it into the FeatureLayer's constructor to create a new feature layer.</p>",
 					"url" : "#",
 					"sampleId" : "fl_featureCollection"
 				}, {
 					"title" : "Gas price data by state mashup",
-					"description" : "Description",
+					"description" : "<p><a href='http://apify.heroku.com/resources' target='_blank'>APIfy</a> is used to retrieve daily AAA gas price data by state as JSON so it can be easily plotted on the map. The map itself consists of a single feature layer showing US states. The ArcGIS API for JavaScript's legend control is used as well as a custom class that shows the gas price for the state currently under the mouse.</p>",
 					"url" : "#",
 					"sampleId" : "data_gas_prices"
 				}, {
 					"title" : "GeoRSS",
-					"description" : "Description",
+					"description" : "<p>Display a GeoRSS file on a map using the esri.layers.GeoRSS class. GeoRSS files must be on a publicly accessible server.</p>",
 					"url" : "#",
 					"sampleId" : "layers_georss"
 				}, {
 					"title" : "KML",
-					"description" : "Description",
+					"description" : "<p>This sample shows how to add a KML file as a layer to an ArcGIS API for JavaScript application. Adding a KML file (.kml or .kmz) is as simple as requiring the relevant API module, and then creating a KML layer and adding it to the map.</p><p>Note: The KML layer needs to be publicly accessible.</p>",
 					"url" : "#",
 					"sampleId" : "layers_kml"
 				}, {
 					"title" : "KML with buffer",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates that the ArcGIS API for JavaScript can not only display KML files, but also gives you full access to the features from a KML file. First, add the KML to the map. Then once the KML layer loads, send the graphics to a geometry service to buffer them. Once the features have been buffered, send them to the PopulationSummary Geoprocessing service. This sample also shows how to rerun the buffer with a larger or smaller distance and rerun the population summary.</p>",
 					"url" : "#",
 					"sampleId" : "layers_kmlbuffer"
 				}, {
 					"title" : "Label Layer",
-					"description" : "Description",
+					"description" : "Add client side labels for vector features using the LabelLayer class. Visit the <a href='https://developers.arcgis.com/en/javascript/jstutorials/tutorial_label_layer.html' target='_blank'>Labeling features client-side</a> tutorial for more information.",
 					"url" : "#",
 					"sampleId" : "layers_label"
 				}, {
 					"title" : "No basemap",
-					"description" : "Description",
+					"description" : "<p>New with version 3.3 of the API, a feature layer (or graphics layer) can be the only layer in a map. World regions are used in this sample.</p>",
 					"url" : "#",
 					"sampleId" : "fl_no_basemap"
 				}, {
 					"title" : "On demand mode",
-					"description" : "Description",
+					"description" : "<p>This sample shows how to combine a cached base map service with an operational layer. Operational layers are displayed on top of a basemap and contain the data end users work with to perform job specific tasks. The operational layer for this sample is US states data. Instead of retrieving all the features at once the code limits the number of features returned by setting the mode to on-demand. The layer draws quickly in on-demand mode because features are retrieved from the server as needed. On-demand mode fetches the selected features and features within the current map extent. Note that as you pan the feature layer queries features that intersect the current extent and adds them to the map.</p>",
 					"url" : "#",
 					"sampleId" : "fl_ondemand"
 				}, {
 					"title" : "Request layer info",
-					"description" : "Description",
+					"description" : "<p><code>esri/request</code> can be used to get info about any object in the ArcGIS Server services directory. In this sample, <code>esriRequest</code> is used to get metadata about a layer in a map service. All of the info for the layer is printed to the console as a string and info about the layer's fields are printed to a textarea.</p><p>The technique used here could also be used to get info about a map service or any other service published to the services directory. </p>",
 					"url" : "#",
 					"sampleId" : "data_requestLayerInfo"
 				}, {
 					"title" : "Select features within a two minute drive time",
-					"description" : "Description",
+					"description" : "<p>Send input values to a GIS model on an ArcGIS Server and use the results to select features in your web application. The model calculates a two minute drive time polygon from a point that you click on the map.</p><p>This model is exposed through an ArcGIS Server geoprocessing service. To get an idea of what inputs and outputs are used in the model, see the services directory for the CalculateDriveTimePolygons service. Besides the default information, the model author has provided additional documentation that you can access by clicking the 'Help URL' link on the page.</p><p>To access your models from ArcGIS Server, create a geoprocessing task. Use services directory to discover the URLs to your own geoprocessing services.</p><p>When you use a geoprocessing task, you'll typically configure a set of input parameters, then execute the task.</p><p>You can listen for the tasks's execute-complete event then add logic to work with the results. In this example the two minute drive time polygon generated by the task is used to select features from the feature layer.</p>",
 					"url" : "#",
 					"sampleId" : "fl_selection"
 				}, {
 					"title" : "Stream Layer",
-					"description" : "Description",
+					"description" : "<p>Receive and display a stream of data using the <a href='https://developers.arcgis.com/en/javascript/jsapi/streamlayer.html' target='_blank'>StreamLayer class</a>. The StreamLayer relies on <a href='https://developer.mozilla.org/en-US/docs/WebSockets' target='_blank'>WebSocketsand</a> is only supported in <a href='http://caniuse.com/#search=websockets' target='_blank'>browsers that have WebSockets</a>.</p><p>The service used in this sample is for demonstration purposes only and mimics an <a href='http://www.esri.com/software/arcgis/arcgisserver/extensions/geoevent-extension' target='_blank'>ArcGIS GeoEvent Processor</a> for Server To publish your own streams of data, please refer to the <a href='http://resources.arcgis.com/en/help/main/10.2/index.html#/What_is_the_ArcGIS_GeoEvent_Processor_extension/01550000065t000000/' target='_blank'>GeoEvent Processor documentation</a>.</p>",
 					"url" : "#",
 					"sampleId" : "layers_streamlayer"
 				}, {
 					"title" : "Table source from ArcGIS Server",
-					"description" : "Description",
+					"description" : "<p>This sample demonstrates how to work with a feature layer with a dynamic data source. The data source for the feature layer is defined using <code>esri/layers/TableDataSource</code>.</p><p>Once the source is defined we can provide this to the feature layer constructor. Note that the FeatureLayer url doesn't have the layer id at the end like you might expect from a feature layer. In this case it ends with <i>dynamicLayer</i>. This only works with map service's where <code>supportsDynamicLayers</code> is true.</p><p><i>Requires ArcGIS Server 10.1 or greater</i></p>",
 					"url" : "#",
 					"sampleId" : "fl_dynamic"
 				}
