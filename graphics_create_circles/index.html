@@ -1,34 +1,57 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Sample</title>
-    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/dojo/dijit/themes/claro/claro.css">
-    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">
+    <title></title>
+    <link rel="stylesheet" href="//js.arcgis.com/3.9/js/esri/css/esri.css">
     <style>
-        html, body {
+        html, body, #mapDiv {
             height: 100%;
             width: 100%;
             margin: 0;
             padding: 0;
         }
+
+        #controls {
+            background: #fff;
+            box-shadow: 0 6px 6px -6px #999;
+            color: #444;
+            font-family: sans-serif;
+            height: auto;
+            left: 1em;
+            padding: 1em;
+            position: absolute;
+            top: 1em;
+            width: auto;
+            z-index: 40;
+        }
+
+            #controls div {
+                padding: 0 0 1em 0;
+            }
     </style>
+
     <script src="//js.arcgis.com/3.9/"></script>
     <script>
-        //require({
-        //    packages: [{
-        //        name: "Sample",
-        //        location: location.pathname.replace(/\/[^/]+$/, "") + "/sample"
-        //    }]
-        //}, ["Sample",
-        //    "dojo/domReady!"],
-        //    function (Sample) {
-        //    console.log("demo started");
-        //});
+        require({
+            packages: [{
+                name: "CreateCircles",
+                location: location.pathname.replace(/\/[^/]+$/, "") + "/createCircles"
+            }]
+        }, ["CreateCircles",
+            "dojo/domReady!"],
+            function (CreateCircles) {
+                console.log("demo started");
+            });
     </script>
 </head>
-<body class="claro">
-    <h1>Not implemented yet</h1>
+<body>
+    <div id="mapDiv"></div>
+    <div id="controls">
+        <div>Click the map.</div>
+        <input type="checkbox" id="geodesic">
+        <label for="geodesic">Geodesic?</label>
+    </div>
 </body>
-</html>
+</html> 

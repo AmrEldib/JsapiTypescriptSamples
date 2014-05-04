@@ -25,6 +25,8 @@
     <Content Include="css\docs.min.css" />
     <Content Include="demo\index.html" />
     <Content Include="exp_rasterlayer\index.html" />
+    <Content Include="graphics_add\images\mangrove.png" />
+    <Content Include="graphics_create_circles\index.html" />
     <Content Include="img\EsriGlobe.ico" />
     <Content Include="index.html" />
     <Content Include="lib\docs.min.js" />
@@ -66,6 +68,8 @@
     <TypeScriptCompile Include="demo\demo\Point.ts" />
     <TypeScriptCompile Include="exp_rasterlayer\canvasRasterLayer\main.ts" />
     <TypeScriptCompile Include="exp_rasterlayer\canvasRasterLayer\CanvasRasterLayerController.ts" />
+    <TypeScriptCompile Include="graphics_create_circles\createCircles\main.ts" />
+    <TypeScriptCompile Include="graphics_create_circles\createCircles\CirclesController.ts" />
     <TypeScriptCompile Include="lib\dijit.d.ts" />
     <TypeScriptCompile Include="lib\dijit.form.button.d.ts" />
     <TypeScriptCompile Include="lib\dijit.form.d.ts" />
