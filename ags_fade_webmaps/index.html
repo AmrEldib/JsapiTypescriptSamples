@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <title>Fade In/Out Effect Using ArcGIS.com Webmaps</title>
+
+    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/dojo/dijit/themes/tundra/tundra.css" />
+    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/esri/css/esri.css" />
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        h3 {
+            margin: 0 0 5px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        .shadow {
+            -moz-box-shadow: 0 0 5px #888;
+            -webkit-box-shadow: 0 0 5px #888;
+            box-shadow: 0 0 5px #888;
+        }
+
+        .map {
+            opacity: 0;
+        }
+
+        #feedback {
+            background: #fff;
+            color: #444;
+            position: absolute;
+            font-family: arial;
+            height: 120px;
+            margin: 5px;
+            padding: 10px;
+            right: 30px;
+            top: 30px;
+            width: 300px;
+            z-index: 40;
+        }
+
+        #note {
+            font-size: 80%;
+            font-weight: 700;
+            padding: 0 0 10px 0;
+        }
+
+        #show_next {
+            cursor: pointer;
+            font-size: 80%;
+        }
+
+            #show_next:hover {
+                border-bottom: 1px solid #444;
+            }
+    </style>
+
+    <script src="http://js.arcgis.com/3.9/"></script>
+    <script>
+        require({
+            packages: [{
+                name: "FadeWebmaps",
+                location: location.pathname.replace(/\/[^/]+$/, "") + "/fadeWebmaps"
+            }]
+        }, ["FadeWebmaps",
+            "dijit/layout/BorderContainer", "dojo/domReady!"],
+            function (FadeWebmaps) {
+                console.log("demo started");
+            });
+    </script>
+</head>
+
+<body class="tundra">
+    <div id="mainWindow"
+         data-dojo-type="dijit.layout.BorderContainer"
+         data-dojo-props="design:'headline',gutters:false"
+         style="width: 100%; height: 100%; margin: 0;">
+
+        <div id="feedback" class="shadow">
+            <h3>Fade Between ArcGIS.com Webmaps</h3>
+            <div id="info">
+                <div id="note">
+                    <span id="current_map"></span>
+                </div>
+                <span id="show_next">Show Next Map</span>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
