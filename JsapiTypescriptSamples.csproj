@@ -21,6 +21,7 @@
     <Content Include="ags_createwebmapid\index.html" />
     <Content Include="ags_createwebmapitem\css\layout.css" />
     <Content Include="ags_createwebmapitem\index.html" />
+    <Content Include="ags_fade_webmaps\index.html" />
     <Content Include="ags_geodesic_buffers\index.html" />
     <Content Include="css\docs.min.css" />
     <Content Include="demo\index.html" />
@@ -38,6 +39,7 @@
     <Content Include="navTemplate.html" />
     <Content Include="web.config" />
     <Content Include="widget_basemap\index.html" />
+    <Content Include="widget_gauge_webmap\index.html" />
     <Content Include="widget_home\index.html" />
     <Content Include="graphics_add\index.html" />
     <Content Include="widget_legend\index.html" />
@@ -62,6 +64,8 @@
     <TypeScriptCompile Include="ags_createwebmapid\webmapbyId\WebmapbyIdController.ts" />
     <TypeScriptCompile Include="ags_createwebmapitem\webmapbyIditem\main.ts" />
     <TypeScriptCompile Include="ags_createwebmapitem\webmapbyIditem\WebmapbyIditemController.ts" />
+    <TypeScriptCompile Include="ags_fade_webmaps\fadeWebmaps\FadeWebmapsController.ts" />
+    <TypeScriptCompile Include="ags_fade_webmaps\fadeWebmaps\main.ts" />
     <TypeScriptCompile Include="ags_geodesic_buffers\geodesicBuffers\GeodesicBuffersController.ts" />
     <TypeScriptCompile Include="ags_geodesic_buffers\geodesicBuffers\main.ts" />
     <TypeScriptCompile Include="demo\demo\main.ts" />
@@ -88,6 +92,8 @@
     <TypeScriptCompile Include="map_simple\simpleMap\main.ts" />
     <TypeScriptCompile Include="widget_basemap\basemapGallery\main.ts" />
     <TypeScriptCompile Include="widget_basemap\basemapGallery\BasemapGalleryController.ts" />
+    <TypeScriptCompile Include="widget_gauge_webmap\gaugeWebmap\main.ts" />
+    <TypeScriptCompile Include="widget_gauge_webmap\gaugeWebmap\GaugeWebmapController.ts" />
     <TypeScriptCompile Include="widget_home\homeButton\main.ts" />
     <TypeScriptCompile Include="graphics_add\addGraphics\AddGraphicsController.ts" />
     <TypeScriptCompile Include="graphics_add\addGraphics\main.ts" />
@@ -107,7 +113,9 @@
   <ItemGroup>
     <Reference Include="System.Web" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ags_editor\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
