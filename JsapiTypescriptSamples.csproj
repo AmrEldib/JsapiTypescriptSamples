@@ -26,6 +26,7 @@
     <Content Include="demo\index.html" />
     <Content Include="exp_rasterlayer\index.html" />
     <Content Include="graphics_add\images\mangrove.png" />
+    <Content Include="graphics_contextmenu\index.html" />
     <Content Include="graphics_create_circles\index.html" />
     <Content Include="img\EsriGlobe.ico" />
     <Content Include="index.html" />
@@ -68,6 +69,8 @@
     <TypeScriptCompile Include="demo\demo\Point.ts" />
     <TypeScriptCompile Include="exp_rasterlayer\canvasRasterLayer\main.ts" />
     <TypeScriptCompile Include="exp_rasterlayer\canvasRasterLayer\CanvasRasterLayerController.ts" />
+    <TypeScriptCompile Include="graphics_contextmenu\mapContextMenu\main.ts" />
+    <TypeScriptCompile Include="graphics_contextmenu\mapContextMenu\MapContextMenuController.ts" />
     <TypeScriptCompile Include="graphics_create_circles\createCircles\main.ts" />
     <TypeScriptCompile Include="graphics_create_circles\createCircles\CirclesController.ts" />
     <TypeScriptCompile Include="lib\dijit.d.ts" />

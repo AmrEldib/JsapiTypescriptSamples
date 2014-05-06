@@ -1,34 +1,65 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Sample</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>Context Menu for Map and Graphics</title>
+
     <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/dojo/dijit/themes/claro/claro.css">
     <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">
     <style>
         html, body {
             height: 100%;
-            width: 100%;
             margin: 0;
             padding: 0;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #header {
+            overflow: hidden;
+            height: 1.6em;
+        }
+
+        div.insetType {
+            color: #97F900;
+            font-size: 24px;
+            font-family: Rockwell, Georgia, "Times New Roman", Times, serif;
+            padding-left: 25px;
         }
     </style>
-    <script src="//js.arcgis.com/3.9/"></script>
+
+    <script src="http://js.arcgis.com/3.9/"></script>
     <script>
-        //require({
-        //    packages: [{
-        //        name: "Sample",
-        //        location: location.pathname.replace(/\/[^/]+$/, "") + "/sample"
-        //    }]
-        //}, ["Sample",
-        //    "dojo/domReady!"],
-        //    function (Sample) {
-        //    console.log("demo started");
-        //});
+        require({
+            packages: [{
+                name: "MapContextMenu",
+                location: location.pathname.replace(/\/[^/]+$/, "") + "/mapContextMenu"
+            }]
+        }, ["MapContextMenu",
+
+            "dijit/form/Button", "dijit/layout/BorderContainer", "dijit/layout/ContentPane", 
+            "dojo/domReady!"],
+            function (MapContextMenu) {
+                console.log("demo started");
+            });
     </script>
 </head>
-<body class="claro">
-    <h1>Not implemented yet</h1>
+<body class="claro" style="font-size: 0.75em;">
+    <div data-dojo-type="dijit/layout/BorderContainer"
+         data-dojo-props="design:'headline', gutters:false"
+         style="width:100%;height:100%;">
+
+        <div id="header"
+             data-dojo-type="dijit/layout/ContentPane"
+             data-dojo-props="region:'top'">
+
+            <div class="insetType">Right-click on map or graphic to view context menu</div>
+
+        </div>
+
+        <div id="map" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"></div>
+
+    </div>
 </body>
 </html>
