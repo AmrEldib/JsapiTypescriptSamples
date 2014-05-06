@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +6,15 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Sample</title>
     <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/dojo/dijit/themes/claro/claro.css">
+=======
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title></title>
+
+>>>>>>> 8676ce4e5e8c1b730c83c7b44697a39efdf3799c
     <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">
     <style>
         html, body {
@@ -13,6 +23,7 @@
             margin: 0;
             padding: 0;
         }
+<<<<<<< HEAD
     </style>
     <script src="//js.arcgis.com/3.9/"></script>
     <script>
@@ -30,5 +41,114 @@
 </head>
 <body class="claro">
     <h1>Not implemented yet</h1>
+=======
+
+        #map {
+            margin: 0;
+            padding: 0;
+        }
+
+        #dashboardPane {
+            background: #bbb;
+        }
+
+        #dashboard {
+            color: #fff;
+            font-family: arial;
+            height: 200px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 5px;
+            text-align: center;
+            width: 870px;
+        }
+
+        #dashboardWidgets {
+            background: #fff;
+            color: #888;
+            margin: 0 auto;
+            text-align: left;
+            -webkit-box-shadow: 0 8px 6px -6px #999;
+            -moz-box-shadow: 0 8px 6px -6px #999;
+            box-shadow: 0 8px 6px -6px #999;
+        }
+
+        #loading {
+            background: url("http://dl.dropbox.com/u/2654618/loading_black.gif") no-repeat center 100px #fff;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .ds {background: #000;overflow: hidden;position: absolute;bottom: 0px;z-index: 2;}
+        #ds-h div { width: 100%; }
+        #ds .o1 { filter: alpha(opacity=10); opacity: .1; }
+        #ds .o2 { filter: alpha(opacity=8); opacity: .08; }
+        #ds .o3 { filter: alpha(opacity=6); opacity: .06; }
+        #ds .o4 { filter: alpha(opacity=4); opacity: .04; }
+        #ds .o5 { filter: alpha(opacity=2); opacity: .02; }
+        #ds .h1 { height: 1px; }
+        #ds .h2 { height: 2px; }
+        #ds .h3 { height: 3px; }
+        #ds .h4 { height: 4px; }
+        #ds .h5 { height: 5px; }
+
+        .gaugeContainer {
+            display: inline-block !important;
+        }
+    </style>
+
+    <script src="http://js.arcgis.com/3.9/"></script>
+    <script>
+        var app = {};
+        require({
+            packages: [{
+                name: "GaugeWebmap",
+                location: location.pathname.replace(/\/[^/]+$/, "") + "/gaugeWebmap"
+            }]
+        }, ["GaugeWebmap",
+            "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dojo/domReady!"],
+            function (GaugeWebmap) {
+                console.log("demo started");
+            });
+    </script>
+</head>
+
+<body class="tundra">
+    <div id="loading"></div>
+    <div id="container"
+         data-dojo-type="dijit/layout/BorderContainer"
+         data-dojo-props="design:'headline',gutters:false"
+         style="width: 100%; height: 100%; margin: 0; visibility: hidden;">
+        <div id="map"
+             data-dojo-type="dijit/layout/ContentPane"
+             data-dojo-props="region:'center'">
+
+            <!-- drop shadow divs -->
+            <div id="ds">
+                <div id="ds-h">
+                    <div class="ds h1 o1"></div>
+                    <div class="ds h2 o2"></div>
+                    <div class="ds h3 o3"></div>
+                    <div class="ds h4 o4"></div>
+                    <div class="ds h5 o5"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="dashboardPane"
+             data-dojo-type="dijit/layout/ContentPane"
+             data-dojo-props="region:'bottom'">
+
+            <div id="dashboard">
+                <div id="dashboardWidgets"></div>
+            </div>
+
+        </div>
+    </div>
+>>>>>>> 8676ce4e5e8c1b730c83c7b44697a39efdf3799c
 </body>
 </html>
