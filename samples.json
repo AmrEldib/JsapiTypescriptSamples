@@ -349,33 +349,33 @@
 			"categoryId" : "section_agol",
 			"samples" : [{
 					"title" : "Editing layout using map data from ArcGIS.com",
-					"description" : "Description",
-					"url" : "#",
+					"description" : "<p>This sample shows how to display and edit data from an <a href='http://www.arcgis.com/home/'>ArcGIS.com</a> map using the <a href='https://developers.arcgis.com/javascript/jshelp/inside_dojoLayouts.html'>Dojo layout widgets</a>. The application layout includes the editor widget and requires that the map contain data from a feature service.</p>The data for the sample application comes from an ArcGIS.com map. You can use ArcGIS.com to discover existing maps or create your own. After creating the map, you can use this sample layout to build an application with little or no development required.</p>The application has the url parameters listed below. If no url parameters are specified, the sample uses hardcoded values from within the application.</p><p><ul><li><b>webmap:</b> Use this to specify the item id for the ArcGIS.com map. The webmap item must be shared publicly.<br><code>webMap=a193c5459e6e4fd99ebf09d893d65cf0</code></li></ul></p><p>For information on working with the Dojo layout widgets see the <a href='https://developers.arcgis.com/javascript/jshelp/inside_dojoLayouts.html'>Build Application Layouts</a> help document.</p><p>Note: In the sample application the CSS and JavaScript are inlined in the page to make it easier to view the code. However in the real world the CSS and JavaScript are typically contained in external files. Click <a href='http://www.arcgis.com/sharing/content/items/50ffdd76f3b84c34a286572c94136b1a/data'>here</a> to download a zipped version of the sample which uses external files for the JavaScript and CSS.</p>",
+					"url" : "ags_editor/index.html",
 					"sampleId" : "ags_editor"
 				}, {
 					"title" : "Fade effect using ArcGIS.com web maps",
-					"description" : "Description",
-					"url" : "#",
+					"description" : "A common use case when developing apps with webmaps from ArcGIS.com is to switch from one webmap to another. This sample shows how that can be accomplished and also shows how to use dojo.fadeIn and dojo.fadeOut to produce a smooth transition between maps.",
+					"url" : "ags_fade_webmaps/index.html",
 					"sampleId" : "ags_fade_webmaps"
 				}, {
 					"title" : "Gauges with ArcGIS.com webmap",
-					"description" : "Description",
-					"url" : "#",
+					"description" : "<p>Version 3.0 of the ArcGIS API for JavaScript introduced the Gauge dijit. One of the goals in introducing this widget is to streamline the process of building dashboard-like apps.</p>In this sample, instead of manually creating and passing objects to the Gauge constructor to create gauges, the gauges are created from JSON stored in a Webmap. Currently, only ArcGIS Explorer Online supports authoring Webmaps with gadgets (the gauge is defined as a type of gadget). Please refer to the <a href='https://developers.arcgis.com/javascript/jssamples/widget_gauge.html'>other Gauge Widget sample</a> sample for an example of how to manually create Gauge Widgets.</p>",
+					"url" : "widget_gauge_webmap/index.html",
 					"sampleId" : "widget_gauge_webmap"
 				}, {
 					"title" : "Geodesic buffers with ArcGIS.com webmap",
-					"description" : "<p>This sample uses an ArcGIS Server 10.1 Geometry Service to generate geodesic buffers.</p><p>The ArcGIS API for JavaScript includes utilities to load data from webmaps authored using ArcGIS.com. This sample creates a map from an ArcGIS.com webmap, grabs some the data from one of the layers in the webmap (in this case, earthquake points) and sends it to an ArcGIS Server 10.1 geometry service to generate geodesic buffers. Because the server where the geometry servies resides is configured to allow <a href='http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing' target='_blank'>CORS</a>, a cross domain POST is done without a proxy.</p>",
-					"url" : "#",
+					"description" : "<p>This sample uses an ArcGIS Server 10.1 Geometry Service to generate geodesic buffers.</p><p>The ArcGIS API for JavaScript includes utilities to load data from webmaps authored using ArcGIS.com. This sample creates a map from an ArcGIS.com webmap, grabs some the data from one of the layers in the webmap (in this case, earthquake points) and sends it to an ArcGIS Server 10.1 geometry service to generate geodesic buffers. Because the server where the geometry servies resides is configured to allow <a href='http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing'>CORS</a>, a cross domain POST is done without a proxy.</p>",
+					"url" : "ags_geodesic_buffers/index.html",
 					"sampleId" : "ags_geodesic_buffers"
 				}, {
 					"title" : "Web map by ID",
-					"description" : "<p>This sample displays a map generated using the <a href='http://www.arcgis.com/home/' target='_blank'>ArcGIS.com</a> map viewer. The map's author used the tools in the map viewer to select a basemap, add operational layers, define an initial extent and create popup windows.</p><p>The ArcGIS API for JavaScript has a utility method that allow you to use maps from ArcGIS.com in a JavaScript application: <code>esri/arcgis/utils.createMap</code>, which is used in this sample.</p>",
-					"url" : "#",
+					"description" : "<p>This sample displays a map generated using the ArcGIS.com map viewer. The map's author used the tools in the map viewer to select a basemap, add operational layers, define an initial extent and create popup windows.</p><p>The ArcGIS API for JavaScript has a utility method that allow you to use maps from ArcGIS.com in a JavaScript application: <code>esri/arcgis/utils.createMap</code>, which is used in this sample.</p>",
+					"url" : "ags_createwebmapid/index.html",
 					"sampleId" : "ags_createwebmapid"
 				}, {
 					"title" : "Web map using JSON",
-					"description" : "<p>It is possible to use <code>esri/arcgis/utils.createMap</code> to create a map using an object. This is an alternative to other samples that create a map using the map id from ArcGIS.com. The code in this sample shows the following:</p>                        <ul><li>create a new map</li><li>set a title</li><li>specify a description</li><li>set an initial extent</li><li>defines layers the map will display</li></ul><p></p>                          <p>Note: You can retrieve the item definition from an ArcGIS.com item using <code>esri/arcgis/utils.getItem()</code></p><p>Once the map object is complete, it is used with createMap to build a map.</p>",
-					"url" : "#",
+					"description" : "<p>It is possible to use <code>esri/arcgis/utils.createMap</code> to create a map using an object. This is an alternative to other samples that create a map using the map id from ArcGIS.com. The code in this sample shows the following:</p><p><ul><li>create a new map</li><li>set a title</li><li>specify a description</li><li>set an initial extent</li><li>defines layers the map will display</li></ul></p><p>Note: You can retrieve the item definition from an ArcGIS.com item using <code>esri/arcgis/utils.getItem()</code></p><p>Once the map object is complete, it is used with createMap to build a map.</p>",
+					"url" : "ags_createwebmapitem/index.html",
 					"sampleId" : "ags_createwebmapitem"
 				}
 			]

@@ -21,6 +21,8 @@
     <Content Include="ags_createwebmapid\index.html" />
     <Content Include="ags_createwebmapitem\css\layout.css" />
     <Content Include="ags_createwebmapitem\index.html" />
+    <Content Include="ags_editor\css\layout.css" />
+    <Content Include="ags_editor\index.html" />
     <Content Include="ags_fade_webmaps\index.html" />
     <Content Include="ags_geodesic_buffers\index.html" />
     <Content Include="css\docs.min.css" />
@@ -64,6 +66,8 @@
     <TypeScriptCompile Include="ags_createwebmapid\webmapbyId\WebmapbyIdController.ts" />
     <TypeScriptCompile Include="ags_createwebmapitem\webmapbyIditem\main.ts" />
     <TypeScriptCompile Include="ags_createwebmapitem\webmapbyIditem\WebmapbyIditemController.ts" />
+    <TypeScriptCompile Include="ags_editor\editWebmap\main.ts" />
+    <TypeScriptCompile Include="ags_editor\editWebmap\EditWebmapController.ts" />
     <TypeScriptCompile Include="ags_fade_webmaps\fadeWebmaps\FadeWebmapsController.ts" />
     <TypeScriptCompile Include="ags_fade_webmaps\fadeWebmaps\main.ts" />
     <TypeScriptCompile Include="ags_geodesic_buffers\geodesicBuffers\GeodesicBuffersController.ts" />
@@ -113,9 +117,7 @@
   <ItemGroup>
     <Reference Include="System.Web" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ags_editor\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
