@@ -32,6 +32,7 @@
     <Content Include="graphics_contextmenu\index.html" />
     <Content Include="graphics_create_circles\index.html" />
     <Content Include="img\EsriGlobe.ico" />
+    <Content Include="img\folder.ico" />
     <Content Include="index.html" />
     <Content Include="lib\docs.min.js" />
     <Content Include="lib\jquery.fastLiveFilter.js" />
@@ -41,6 +42,9 @@
     <Content Include="navTemplate.html" />
     <Content Include="web.config" />
     <Content Include="widget_basemap\index.html" />
+    <Content Include="widget_extendInfowindow\index.html" />
+    <Content Include="widget_extendInfowindow\myModules\InfoWindow.css" />
+    <Content Include="widget_extendInfowindow\myModules\InfoWindow.js" />
     <Content Include="widget_gauge_webmap\index.html" />
     <Content Include="widget_home\index.html" />
     <Content Include="graphics_add\index.html" />
@@ -96,6 +100,8 @@
     <TypeScriptCompile Include="map_simple\simpleMap\main.ts" />
     <TypeScriptCompile Include="widget_basemap\basemapGallery\main.ts" />
     <TypeScriptCompile Include="widget_basemap\basemapGallery\BasemapGalleryController.ts" />
+    <TypeScriptCompile Include="widget_extendInfowindow\extendInfowindow\main.ts" />
+    <TypeScriptCompile Include="widget_extendInfowindow\extendInfowindow\ExtendInfowindowController.ts" />
     <TypeScriptCompile Include="widget_gauge_webmap\gaugeWebmap\main.ts" />
     <TypeScriptCompile Include="widget_gauge_webmap\gaugeWebmap\GaugeWebmapController.ts" />
     <TypeScriptCompile Include="widget_home\homeButton\main.ts" />
