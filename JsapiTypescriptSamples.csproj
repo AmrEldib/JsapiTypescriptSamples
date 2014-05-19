@@ -45,6 +45,9 @@
     <Content Include="widget_extendInfowindow\index.html" />
     <Content Include="widget_extendInfowindow\myModules\InfoWindow.css" />
     <Content Include="widget_extendInfowindow\myModules\InfoWindow.js" />
+    <Content Include="widget_formatInfoWindow\images\down.png" />
+    <Content Include="widget_formatInfoWindow\images\up.png" />
+    <Content Include="widget_formatInfoWindow\index.html" />
     <Content Include="widget_gauge_webmap\index.html" />
     <Content Include="widget_home\index.html" />
     <Content Include="graphics_add\index.html" />
@@ -102,6 +105,8 @@
     <TypeScriptCompile Include="widget_basemap\basemapGallery\BasemapGalleryController.ts" />
     <TypeScriptCompile Include="widget_extendInfowindow\extendInfowindow\main.ts" />
     <TypeScriptCompile Include="widget_extendInfowindow\extendInfowindow\ExtendInfowindowController.ts" />
+    <TypeScriptCompile Include="widget_formatInfoWindow\formatInfowindow\main.ts" />
+    <TypeScriptCompile Include="widget_formatInfoWindow\formatInfowindow\FormatInfowindowController.ts" />
     <TypeScriptCompile Include="widget_gauge_webmap\gaugeWebmap\main.ts" />
     <TypeScriptCompile Include="widget_gauge_webmap\gaugeWebmap\GaugeWebmapController.ts" />
     <TypeScriptCompile Include="widget_home\homeButton\main.ts" />
