@@ -28,6 +28,7 @@
     <Content Include="css\docs.min.css" />
     <Content Include="demo\index.html" />
     <Content Include="exp_rasterlayer\index.html" />
+    <Content Include="gp_popuplink\index.html" />
     <Content Include="graphics_add\images\mangrove.png" />
     <Content Include="graphics_contextmenu\index.html" />
     <Content Include="graphics_create_circles\index.html" />
@@ -84,6 +85,8 @@
     <TypeScriptCompile Include="demo\demo\Point.ts" />
     <TypeScriptCompile Include="exp_rasterlayer\canvasRasterLayer\main.ts" />
     <TypeScriptCompile Include="exp_rasterlayer\canvasRasterLayer\CanvasRasterLayerController.ts" />
+    <TypeScriptCompile Include="gp_popuplink\gpPopupLink\main.ts" />
+    <TypeScriptCompile Include="gp_popuplink\gpPopupLink\GPPopupLink_Controller.ts" />
     <TypeScriptCompile Include="graphics_contextmenu\mapContextMenu\main.ts" />
     <TypeScriptCompile Include="graphics_contextmenu\mapContextMenu\MapContextMenuController.ts" />
     <TypeScriptCompile Include="graphics_create_circles\createCircles\main.ts" />
