@@ -52,6 +52,7 @@
     <Content Include="widget_gauge_webmap\index.html" />
     <Content Include="widget_home\index.html" />
     <Content Include="graphics_add\index.html" />
+    <Content Include="widget_infowindow\index.html" />
     <Content Include="widget_legend\index.html" />
     <Content Include="widget_overviewmap\index.html" />
     <Content Include="widget_locate\index.html" />
@@ -115,6 +116,8 @@
     <TypeScriptCompile Include="widget_home\homeButton\main.ts" />
     <TypeScriptCompile Include="graphics_add\addGraphics\AddGraphicsController.ts" />
     <TypeScriptCompile Include="graphics_add\addGraphics\main.ts" />
+    <TypeScriptCompile Include="widget_infowindow\infowindowLite\main.ts" />
+    <TypeScriptCompile Include="widget_infowindow\infowindowLite\InfowindowLiteController.ts" />
     <TypeScriptCompile Include="widget_legend\legendWidget\LegendController.ts" />
     <TypeScriptCompile Include="widget_legend\legendWidget\main.ts" />
     <TypeScriptCompile Include="widget_overviewmap\overviewMapWidget\OverviewMapController.ts" />
