@@ -43,6 +43,7 @@
     <Content Include="navTemplate.html" />
     <Content Include="popup_chart\images\popup.png" />
     <Content Include="popup_chart\index.html" />
+    <Content Include="popup_sidepanel\index.html" />
     <Content Include="web.config" />
     <Content Include="widget_basemap\index.html" />
     <Content Include="widget_extendInfowindow\index.html" />
@@ -110,6 +111,8 @@
     <TypeScriptCompile Include="map_simple\simpleMap\main.ts" />
     <TypeScriptCompile Include="popup_chart\popupchart\main.ts" />
     <TypeScriptCompile Include="popup_chart\popupchart\PopupChartController.ts" />
+    <TypeScriptCompile Include="popup_sidepanel\sidepanel\main.ts" />
+    <TypeScriptCompile Include="popup_sidepanel\sidepanel\SidePanelController.ts" />
     <TypeScriptCompile Include="widget_basemap\basemapGallery\main.ts" />
     <TypeScriptCompile Include="widget_basemap\basemapGallery\BasemapGalleryController.ts" />
     <TypeScriptCompile Include="widget_extendInfowindow\extendInfowindow\main.ts" />

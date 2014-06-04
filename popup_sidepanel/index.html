@@ -1,34 +1,91 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Sample</title>
-    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/dojo/dijit/themes/claro/claro.css">
-    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">
-    <style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>Popup - Sidebar</title>
+    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/dojo/dijit/themes/claro/claro.css" />
+    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/esri/css/esri.css" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans">
+
+    <style type="text/css">
         html, body {
             height: 100%;
             width: 100%;
             margin: 0;
             padding: 0;
+            margin: 0;
+            font-family: "Open Sans";
+        }
+
+        #leftPane {
+            width: 20%;
+            margin: 0;
+            border: none;
+        }
+
+        #map {
+            padding: 0;
+        }
+
+        .nav {
+            padding: 5px 10px;
+            background: #4479BA;
+            color: #FFF;
+            border-radius: 5px;
+            border: solid 1px #20538D;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        #header {
+            text-align: center;
+            height: 60px;
+            border-bottom: solid 1px #ccc;
         }
     </style>
-    <script src="//js.arcgis.com/3.9/"></script>
+
+    <script src="http://js.arcgis.com/3.9/"></script>
     <script>
-        //require({
-        //    packages: [{
-        //        name: "Sample",
-        //        location: location.pathname.replace(/\/[^/]+$/, "") + "/sample"
-        //    }]
-        //}, ["Sample",
-        //    "dojo/domReady!"],
-        //    function (Sample) {
-        //    console.log("demo started");
-        //});
+        require({
+            packages: [{
+                name: "SidePanel",
+                location: location.pathname.replace(/\/[^/]+$/, "") + "/sidepanel"
+            }]
+        }, ["SidePanel",
+                "dojo/domReady!"],
+            function (SidePanel) {
+                console.log("demo started");
+            });
     </script>
 </head>
+
 <body class="claro">
-    <h1>Not implemented yet</h1>
+    <div id="mainWindow" data-dojo-type="dijit/layout/BorderContainer"
+         data-dojo-props="design:'headline',gutters:false"
+         style="width:100%; height:100%;">
+        <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="gutters:false"
+             region="left" style="width: 20%;height:100%;">
+            <div id="leftPane" data-dojo-type="dijit/layout/ContentPane"
+                 data-dojo-props="region:'center'"></div>
+            <div id="header" data-dojo-type="dijit/layout/ContentPane"
+                 data-dojo-props="region:'top'">
+                <div id="featureCount" style="margin-bottom:5px;">Click to select feature(s)</div>
+                <div id="pager" style="display:none;">
+                    <a href='javascript:void(0);' id="previous" class='nav' style="text-decoration: none;">
+                        < Prev
+                    </a>
+
+                    <a href='javascript:void(0);' id="next" class='nav' style="text-decoration: none;">
+                        Next >
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="map" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"></div>
+    </div>
 </body>
-</html>
+
+</html> 
