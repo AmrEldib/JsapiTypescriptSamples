@@ -1,34 +1,69 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Sample</title>
-    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/dojo/dijit/themes/claro/claro.css">
-    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--The viewport meta tag is used to improve the presentation and behavior of the samples
+      on iOS devices-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <title>Popup</title>
+
+    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/dojo/dijit/themes/claro/claro.css" />
+    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/esri/css/esri.css" />
     <style>
-        html, body {
-            height: 100%;
-            width: 100%;
-            margin: 0;
+        html, body, #map {
             padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        .esriPopup.myTheme .titlePane,
+        .dj_ie7 .esriPopup.myTheme .titlePane .title {
+            background-color: #899752;
+            color: #333333;
+            font-weight: bold;
+        }
+
+        .esriPopup.myTheme .titlePane {
+            border-bottom: 1px solid #121310;
+        }
+
+        .esriPopup.myTheme a {
+            color: #d6e68a;
+        }
+
+        .esriPopup.myTheme .titleButton,
+        .esriPopup.myTheme .pointer,
+        .esriPopup.myTheme .outerPointer,
+        .esriPopup.myTheme .esriViewPopup .gallery .mediaHandle,
+        .esriPopup.myTheme .esriViewPopup .gallery .mediaIcon {
+            background-image: url(./images/popup.png);
+        }
+
+        .esriPopup.myTheme .contentPane,
+        .esriPopup.myTheme .actionsPane {
+            border-color: 1px solid #121310;
+            background-color: #424242;
+            color: #ffffff;
         }
     </style>
-    <script src="//js.arcgis.com/3.9/"></script>
+
+    <script src="http://js.arcgis.com/3.9/"></script>
     <script>
-        //require({
-        //    packages: [{
-        //        name: "Sample",
-        //        location: location.pathname.replace(/\/[^/]+$/, "") + "/sample"
-        //    }]
-        //}, ["Sample",
-        //    "dojo/domReady!"],
-        //    function (Sample) {
-        //    console.log("demo started");
-        //});
+        require({
+            packages: [{
+                name: "Popupchart",
+                location: location.pathname.replace(/\/[^/]+$/, "") + "/popupchart"
+            }]
+        }, ["Popupchart",
+                "dojo/domReady!"],
+            function (Popupchart) {
+                console.log("demo started");
+            });
     </script>
 </head>
+
 <body class="claro">
-    <h1>Not implemented yet</h1>
+    <div id="map"></div>
 </body>
+
 </html>
