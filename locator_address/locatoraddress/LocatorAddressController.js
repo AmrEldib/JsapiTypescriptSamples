@@ -3,9 +3,8 @@ define(["require", "exports", "esri/map", "esri/tasks/locator", "esri/graphic", 
     
 
     var LocatorAddressController = (function () {
-        function LocatorAddressController(map, button) {
+        function LocatorAddressController(map) {
             this.map = map;
-            this.button = button;
             parser.parse();
             esriConfig.defaults.io.proxyUrl = "/EsriProxy/proxy.ashx";
         }

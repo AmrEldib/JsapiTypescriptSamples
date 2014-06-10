@@ -1,3 +1,3 @@
 ﻿import LocatorAddressController = require("./LocatorAddressController");
-var locatorAddressController = new LocatorAddressController("map", "locate");
+var locatorAddressController = new LocatorAddressController("map");
 locatorAddressController.start();

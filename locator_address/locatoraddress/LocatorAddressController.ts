@@ -14,13 +14,12 @@ import parser = require("dojo/parser");
 import dom = require("dojo/dom");
 import registry = require("dijit/registry");
 import esriConfig = require("esri/config");
-import on = require("dojo/on");
 
 export = LocatorAddressController;
 
 class LocatorAddressController {
         
-    constructor(public map: string, public button: string) {
+    constructor(public map: string) {
         parser.parse();
         esriConfig.defaults.io.proxyUrl = "/EsriProxy/proxy.ashx";
     }
