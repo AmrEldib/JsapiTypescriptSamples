@@ -1,34 +1,79 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Sample</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>Geocode Details</title>
+
     <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/dojo/dijit/themes/claro/claro.css">
     <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">
     <style>
         html, body {
             height: 100%;
+            margin: 0;
+            padding: 0;
             width: 100%;
+            color: #353129;
+        }
+
+        fieldset {
+            border: 1px solid #353129;
+            color: #353129;
+        }
+
+        #map {
             margin: 0;
             padding: 0;
         }
+
+        #footerPane {
+            border: none;
+            height: 300px;
+        }
     </style>
-    <script src="//js.arcgis.com/3.9/"></script>
+
+    <script src="http://js.arcgis.com/3.9/"></script>
+
     <script>
-        //require({
-        //    packages: [{
-        //        name: "Sample",
-        //        location: location.pathname.replace(/\/[^/]+$/, "") + "/sample"
-        //    }]
-        //}, ["Sample",
-        //    "dojo/domReady!"],
-        //    function (Sample) {
-        //    console.log("demo started");
-        //});
+        require({
+            packages: [{
+                name: "Locatordetail",
+                location: location.pathname.replace(/\/[^/]+$/, "") + "/locatordetail"
+            }]
+        }, ["Locatordetail",
+                "dijit/form/Button", "dijit/form/Textarea",
+                    "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dojo/domReady!"],
+            function (Locatordetail) {
+                console.log("demo started");
+            });
     </script>
+
 </head>
+
 <body class="claro">
-    <h1>Not implemented yet</h1>
+    <div data-dojo-type="dijit/layout/BorderContainer"
+         data-dojo-props="gutters:false, design:'sidebar'"
+         style="width:100%;height:100%;">
+
+        <div id="map"
+             data-dojo-type="dijit/layout/ContentPane"
+             data-dojo-props="region:'center'">
+        </div>
+
+        <div id="footerPane"
+             data-dojo-type="dijit/layout/ContentPane"
+             data-dojo-props="region:'bottom'">
+
+            <div>
+                Address :
+                <input type="text" id="address" size="60" value="380 New York St, Redlands, CA, 92373" />
+                <button id="locate" data-dojo-type="dijit/form/Button">Locate</button>
+            </div>
+            <div id="currentextent"></div>
+            <div id="resultsdiv"></div>
+
+        </div>
+    </div>
 </body>
+
 </html>
