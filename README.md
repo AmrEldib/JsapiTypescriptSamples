@@ -14,5 +14,6 @@ You can also reach the equivalent JSAPI sample.
 
 ## Setup Instructions ##
 - Download and setup the code as an application in IIS.
+- Modify index.html to remove the Google Analytics script at the bottom of the page.
 - The code assumes that [Esri's proxy](https://github.com/Esri/resource-proxy) is setup as another application named 'EsriProxy'.
 - To make things easier, turn off the filtering of the proxy by switching the value of the 'mustMatch' attribute to 'false'.  
